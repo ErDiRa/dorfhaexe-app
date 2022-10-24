@@ -1,26 +1,51 @@
-import { VueRouter } from 'vue-router';
+import { computed, onMounted, onUnmounted, ref } from 'vue';
+import About from './components/pages/about.vue';
+import Contact from './components/pages/contact.vue';
+import Dates from './components/pages/dates.vue';
+import Home from './components/pages/home.vue';
 
-// 1. Define route components.
-// These can be imported from other files
-const Home = { template: '<div>Home</div>' }
-const About = { template: '<div>About</div>' }
+import { navigation } from './const/strings';
 
-// 2. Define some routes
-// Each route should map to a component.
-// We'll talk about nested routes later.
-const routes = [
-  { path: '/', component: Home },
-  { path: '/about', component: About },
-]
+// Define some routes
+const routes = {
+	'/': {
+		path: navigation.home.ROUTE,
+		component: Home
+	},
+	'/termine': {
+		path: navigation.dates.ROUTE,
+		component: Dates
+	},
+	'/ueber_uns': {
+		path: navigation.about.ROUTE,
+		component: About
+	},
+	'/kontakt': {
+		path: navigation.contact.ROUTE,
+		component: Contact
+	}
+};
 
-// 3. Create the router instance and pass the `routes` option
-// You can pass in additional options here, but let's
-// keep it simple for now.
-const router = VueRouter.createRouter({
-  // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
-  history: VueRouter.createWebHashHistory(),
-  routes, // short for `routes: routes`
-})
+export function useRouter() {
+	const currentPath = ref(window.location.hash);
 
+	const setCurrentPath = () => {
+		currentPath.value = window.location.hash;
+	};
 
- export default router;
+	onMounted(() => {
+		window.addEventListener('hashchange', setCurrentPath);
+	});
+
+	onUnmounted(() => {
+		window.removeEventListener('hashchange', setCurrentPath);
+	});
+
+	const currentView = computed(() => {
+		return routes[currentPath.value.slice(1) || '/'] || NotFound;
+	});
+
+	return {
+		currentView
+	};
+}

@@ -1,31 +1,48 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-</script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <header-view @navigate-to="navigate"/>
+  <main>
+    <component :is="mainComponent"></component>
+  </main>
+  <footer-view/>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+<script setup>
+import { computed } from 'vue';
+import FooterView from './components/footer/footer.vue';
+import HeaderView from './components/header/header.vue';
+import About from './components/pages/about.vue';
+import Contact from './components/pages/contact.vue';
+import Dates from './components/pages/dates.vue';
+import Home from './components/pages/home.vue';
+import { navigation } from './const/strings';
+import { useRouter } from './router';
+
+const router = useRouter()
+
+let mainComponent  = computed(() => {
+  switch (router.currentView){
+    case navigation.home.ROUTE:
+      return Home;
+    case navigation.about.ROUTE:
+      console.log("is About")
+      return About;
+    case navigation.dates.ROUTE:
+      return Dates;
+    case navigation.contact.ROUTE:
+      return Contact;
+    default:
+      return null;
+  }
+})
+
+// set the location and load the correct component
+// use pushState to prevent a page reload as vue.js is loading the component
+// which looks like a navigation
+const navigate = (route) => {
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
+
+</script>
+<style lang="scss">
 </style>

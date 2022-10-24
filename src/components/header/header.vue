@@ -1,12 +1,10 @@
 <template>
-	<div :class="container">
-		<div :class="$style.emblem">
-
-		</div>
-		<div :class="$style.menu">
-		</div>
+	<div>
+		<menu-view @navigate-to="(route) => $emit('navigateTo', route)"></menu-view>
 	</div>
 </template>
 
-<script>
+<script setup>
+import MenuView from './menu.vue';
+const emit = defineEmits(['navigateTo'])
 </script>

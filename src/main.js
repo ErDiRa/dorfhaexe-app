@@ -1,12 +1,10 @@
-import router from 'router.js';
 import { createApp } from 'vue';
 import App from './App.vue';
 import './normalize.css';
 import './style.scss';
 
-const app = createApp(App)
+const app = createApp(App);
 
-app.use(router)
+app.mount('#app');
 
-app.mount('#app')
-
+export default app;

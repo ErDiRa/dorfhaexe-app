@@ -1,4 +1,4 @@
-import { computed, onMounted, onUnmounted, ref } from 'vue';
+import { onMounted, onUnmounted, ref, shallowRef, watch } from 'vue';
 import About from './components/pages/about.vue';
 import Contact from './components/pages/contact.vue';
 import Dates from './components/pages/dates.vue';
@@ -27,11 +27,19 @@ const routes = {
 };
 
 export function useRouter() {
-	const currentPath = ref(window.location.hash);
+	const currentPath = ref(window.location.pathname);
 
 	const setCurrentPath = () => {
-		currentPath.value = window.location.hash;
+		currentPath.value = window.location.pathname;
 	};
+
+	const currentView = shallowRef(null);
+	watch(
+		() => currentPath.value,
+		(newVal) => {
+			currentView.value = routes[newVal] || null;
+		}
+	);
 
 	onMounted(() => {
 		window.addEventListener('hashchange', setCurrentPath);
@@ -41,11 +49,5 @@ export function useRouter() {
 		window.removeEventListener('hashchange', setCurrentPath);
 	});
 
-	const currentView = computed(() => {
-		return routes[currentPath.value.slice(1) || '/'] || NotFound;
-	});
-
-	return {
-		currentView
-	};
+	return currentView;
 }

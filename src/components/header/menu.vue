@@ -23,7 +23,6 @@ const navigateTo = (route) => {
       window.history.pushState("Home", navigation.home.NAME, navigation.home.ROUTE);
       break;
     case navigation.about.ROUTE:
-      console.log("is About")
       window.history.pushState("About", navigation.about.NAME, navigation.about.ROUTE);
       break;
     case navigation.dates.ROUTE:
@@ -35,6 +34,9 @@ const navigateTo = (route) => {
     default:
 			break;
   }
+	// fire the event hashchange to trigger a route change in App.vue as pushState
+	// does not trigger this event
+	window.dispatchEvent(new HashChangeEvent('hashchange'));
 }
 
 const emit = defineEmits(['navigateTo'])

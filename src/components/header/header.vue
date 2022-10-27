@@ -3,9 +3,7 @@
 		<div :class="$style.logo">
 			<haexe-logo></haexe-logo>
 		</div>
-		<div :class="$style.menu">
-			<menu-view @navigate-to="(route) => $emit('navigateTo', route)"></menu-view>
-		</div>
+		<menu-view @navigate-to="(route) => $emit('navigateTo', route)" :class="$style.menu"></menu-view>
 	</div>
 	<hr :class="$style.separator"/>
 </template>
@@ -24,6 +22,8 @@ const emit = defineEmits(['navigateTo'])
 	}
 	.menu{
 		margin-left: auto;
+		margin-top: auto;
+		margin-bottom: auto;
 	}
 }
 .separator {

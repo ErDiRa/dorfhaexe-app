@@ -47,9 +47,9 @@ const open = () => {
 		setTimeout( () => {
 			animationFinished.value = true;
 			setTimeout(() => {
-				showMenuContent.value = true;
-			}, 50);
-		},150)
+			 	showMenuContent.value = true;
+			}, 30);
+		},250)
 	}
 }
 
@@ -80,10 +80,8 @@ const navigateTo = (route) => {
 
 <style lang="scss" module>
 .menu{
-	position: relative;
-	margin-right: 2rem;
 	.menuToggle{
-		position: absolute;
+		position: relative;
 		border: 0;
 		background-color: transparent;
 		z-index: 500;
@@ -102,7 +100,7 @@ const navigateTo = (route) => {
 			z-index:500;
 			background: #F6D7CD;
 
-			animation: fadeIn 150ms 1 ease-out;
+			animation: fadeIn 250ms 1 ease-out;
 			animation-fill-mode: forwards;
 			transform: translate(50%,-50%);
 			border-radius: 50%;
@@ -117,20 +115,18 @@ const navigateTo = (route) => {
 					border-radius: 50%;
 					top: 0;
 					right: 0;
-					border: 3rem solid #F6D7CD;
 					height:	3rem;
 					width: 3rem;
 					border-radius: 50%;
 				}
 
 				to {
-					transform: translate(50%,-50%) !important;
+					transform: translate(25%,-25%);
 					border-radius: 50%;
 					top: 0;
 					right: 0;
-					border: 72rem solid #F6D7CD;
-					height: 72rem;
-					width:	72rem;
+					height: 400vh;
+					width: 300vh;
 					border-radius: 50%;
 				}
 		}

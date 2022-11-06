@@ -12,26 +12,10 @@
 			:exit="{ opacity: 0 }"
 			:class="$style.slide"
 		>
-			<img
-				src="../../assets/group-1.JPG"
-				v-show="current === 0"
-				:class="$style.image"
-			/>
-			<img
-				src="../../assets/group-2.JPG"
-				v-show="current === 1"
-				:class="$style.image"
-			/>
-			<img
-				src="../../assets/group-3.JPG"
-				v-show="current === 2"
-				:class="$style.image"
-			/>
-			<img
-				src="../../assets/group-4.JPG"
-				v-show="current === 3"
-				:class="$style.image"
-			/>
+			<img :src="imageTwo" v-show="current === 0" :class="$style.image" />
+			<img :src="imageTwo" v-show="current === 1" :class="$style.image" />
+			<img :src="imageThree" v-show="current === 2" :class="$style.image" />
+			<img :src="imageFour" v-show="current === 3" :class="$style.image" />
 		</Motion>
 		<button @click="nextImage()" :class="$style.chevronRight">
 			<ChevronRight></ChevronRight>
@@ -44,6 +28,9 @@
 	import { ref, watch } from 'vue';
 	import ChevronLeft from '../../assets/chevron-left.svg';
 	import ChevronRight from '../../assets/chevron-right.svg';
+	import imageTwo from '../../assets/group-2.JPG';
+	import imageThree from '../../assets/group-3.JPG';
+	import imageFour from '../../assets/group-4.JPG';
 	import { useSwipe } from '../../composables/swipe';
 
 	//TODO: resize images using: ImageMagick https://www.smashingmagazine.com/2015/06/efficient-image-resizing-with-imagemagick/

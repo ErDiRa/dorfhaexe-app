@@ -5,18 +5,14 @@
 			<close-icon v-else @click="close" />
 		</button>
 		<div v-if="isOpen" :class="$style.menuDropdown">
-			<div
-				ref="animatedDiv"
-				v-if="!animationFinished"
-				:class="$style.animatedCircle"
-			></div>
-			<ul v-else :class="$style.navMenu">
-				<div
-					:class="
-						showMenuContent
-							? [$style.navContent, $style.show]
-							: [$style.navContent]
-					"
+			<ul :class="$style.navMenu">
+				<Motion
+					:initial="{ opacity: 0 }"
+					:animate="{
+						opacity: 1
+					}"
+					:exit="{ opacity: 0 }"
+					:class="$style.navContent"
 				>
 					<li>
 						<a
@@ -65,55 +61,31 @@
 							>{{ navigation.contact.NAME }}</a
 						>
 					</li>
-				</div>
+				</Motion>
 			</ul>
 		</div>
 	</nav>
 </template>
 
 <script setup>
-	import { inject, ref, watch } from 'vue';
+	import { Motion } from 'motion/vue';
+	import { inject, ref } from 'vue';
 	import MenuIcon from '../../assets/menu.svg';
 	import CloseIcon from '../../assets/x.svg';
 	import { navigation } from '../../const/strings';
 
 	let currentView = inject('currentView');
 
-	watch(
-		() => currentView.value,
-		(newVal, oldVal) => {
-			console.log(newVal, oldVal);
-		}
-	);
-
-	let isOpen = ref(false);
-
-	let animationFinished = ref(false);
-
-	let showMenuContent = ref(false);
-
-	let animatedDiv = ref(null);
-
 	const close = () => {
 		isOpen.value = false;
-		animationFinished.value = false;
-		showMenuContent.value = false;
 		document.documentElement.style.overflow = 'auto';
 	};
+
+	let isOpen = ref(false);
 
 	const open = () => {
 		isOpen.value = true;
 		document.documentElement.style.overflow = 'hidden';
-		if (isOpen.value) {
-			setTimeout(() => {
-				// stop the animation to display full size div (menu container)
-				animationFinished.value = true;
-				// trigger displaying of menu content
-				setTimeout(() => {
-					showMenuContent.value = true;
-				}, 30);
-			}, 150);
-		}
 	};
 
 	const navigateTo = (route) => {
@@ -173,42 +145,6 @@
 			top: 0;
 			bottom: 0;
 
-			.animatedCircle {
-				position: fixed;
-				z-index: 500;
-				background: #f6d7cd;
-
-				animation: fadeIn 150ms 1 ease-in;
-				animation-fill-mode: forwards;
-				transform: translate(50%, -50%);
-				border-radius: 50%;
-				height: 3rem;
-				width: 3rem;
-				overflow: hidden;
-
-				@keyframes fadeIn {
-					from {
-						transform: translate(50%, -50%);
-						border-radius: 50%;
-						top: 0;
-						right: 0;
-						height: 3rem;
-						width: 3rem;
-						border-radius: 50%;
-					}
-
-					to {
-						transform: translate(25%, -25%);
-						border-radius: 50%;
-						top: 0;
-						right: 0;
-						height: 400vh;
-						width: 300vh;
-						border-radius: 50%;
-					}
-				}
-			}
-
 			.navMenu {
 				display: flex;
 				flex-direction: column;
@@ -252,18 +188,15 @@
 						color: #a7c69d;
 					}
 				}
-				.show {
-					opacity: 1;
-				}
 			}
 		}
+	}
 
-		.hide {
-			display: none;
-		}
+	.hide {
+		display: none;
+	}
 
-		.active {
-			color: #75a366;
-		}
+	.active {
+		color: #75a366;
 	}
 </style>

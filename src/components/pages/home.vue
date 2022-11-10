@@ -53,6 +53,7 @@
 		display: flex;
 		justify-content: left;
 		margin-top: 1.5rem;
+		margin-bottom: 0;	
 	}
 
 	@media (max-width: 960px) {

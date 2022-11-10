@@ -3,19 +3,54 @@
 		<button :class="$style.chevronLeft" @click="previousImage()">
 			<ChevronLeft></ChevronLeft>
 		</button>
+		<div v-if="enlarged" :class="$style.backdrop"></div>
 		<Motion
 			:key="current"
+			ref="imageContainer"
 			:initial="{ opacity: 0 }"
 			:animate="{
 				opacity: 1
 			}"
 			:exit="{ opacity: 0 }"
-			:class="$style.slide"
+			:class="
+				enlarged
+					? [$style.slide, $style.scaled]
+					: [$style.slide, $style.unscaled]
+			"
+			@click="enlarge"
 		>
-			<img :src="imageTwo" v-show="current === 0" :class="$style.image" />
-			<img :src="imageTwo" v-show="current === 1" :class="$style.image" />
-			<img :src="imageThree" v-show="current === 2" :class="$style.image" />
-			<img :src="imageFour" v-show="current === 3" :class="$style.image" />
+			<img
+				:src="imageOneMedium"
+				:srcset="`${imageOneSmall} 1024w,
+									${imageOneMedium} 1440w,
+									${imageOneLarge} 2400w`"
+				v-show="current === 0"
+				:class="$style.image"
+			/>
+			<img
+				:src="imageTwoMedium"
+				:srcset="`${imageTwoSmall} 1024w,
+									${imageTwoMedium} 1440w,
+									${imageTwoLarge} 2400w`"
+				v-show="current === 1"
+				:class="$style.image"
+			/>
+			<img
+				:src="imageThreeMedium"
+				:srcset="`${imageThreeSmall} 1024w,
+									${imageThreeMedium} 1440w,
+									${imageThreeLarge} 2400w`"
+				v-show="current === 2"
+				:class="$style.image"
+			/>
+			<img
+				:src="imageFourMedium"
+				:srcset="`${imageFourSmall} 1024w,
+									${imageFourMedium} 1440w,
+									${imageFourLarge} 2400w`"
+				v-show="current === 3"
+				:class="$style.image"
+			/>
 		</Motion>
 		<button @click="nextImage()" :class="$style.chevronRight">
 			<ChevronRight></ChevronRight>
@@ -25,17 +60,32 @@
 
 <script setup>
 	import { Motion } from 'motion/vue';
-	import { ref, watch } from 'vue';
+	import { ref } from 'vue';
 	import ChevronLeft from '../../assets/chevron-left.svg';
 	import ChevronRight from '../../assets/chevron-right.svg';
-	import imageTwo from '../../assets/group-2.JPG';
-	import imageThree from '../../assets/group-3.JPG';
-	import imageFour from '../../assets/group-4.JPG';
-	import { useSwipe } from '../../composables/swipe';
-
-	//TODO: resize images using: ImageMagick https://www.smashingmagazine.com/2015/06/efficient-image-resizing-with-imagemagick/
+	import imageOneSmall from '../../assets/group-1-1024w.JPG';
+	import imageOneMedium from '../../assets/group-1-1440w.JPG';
+	import imageOneLarge from '../../assets/group-1-2400w.JPG';
+	import imageTwoSmall from '../../assets/group-2-1024w.JPG';
+	import imageTwoMedium from '../../assets/group-2-1440w.JPG';
+	import imageTwoLarge from '../../assets/group-2-2400w.JPG';
+	import imageThreeSmall from '../../assets/group-3-1024w.JPG';
+	import imageThreeMedium from '../../assets/group-3-1440w.JPG';
+	import imageThreeLarge from '../../assets/group-3-2400w.JPG';
+	import imageFourSmall from '../../assets/group-4-1024w.JPG';
+	import imageFourMedium from '../../assets/group-4-1440w.JPG';
+	import imageFourLarge from '../../assets/group-4-2400w.JPG';
 
 	let current = ref(0);
+
+	let imageContainer = ref(null);
+
+	let enlarged = ref(false);
+
+	const enlarge = () => {
+		enlarged.value = !enlarged.value;
+		return;
+	};
 
 	const nextImage = () => {
 		current.value++;
@@ -43,20 +93,6 @@
 			current.value = 0;
 		}
 	};
-
-	const { xDiff, yDiff } = useSwipe();
-
-	// listen to touch events
-	watch([xDiff, yDiff], ([newXDiff], [newYDiff]) => {
-		if (Math.abs(newXDiff) > Math.abs(newYDiff)) {
-			/*most significant*/
-			if (xDiff > 0) {
-				nextImage();
-			} else {
-				previousImage();
-			}
-		}
-	});
 
 	const previousImage = () => {
 		current.value--;
@@ -67,6 +103,25 @@
 </script>
 
 <style lang="scss" module>
+	.backdrop {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+		transition: all 0.25s ease;
+	}
+
+	.scaled {
+		transform: scale(1.5);
+		transition: 0.25s ease;
+	}
+
+	.unscaled {
+		transform: scale(1);
+		transition: 0.25s ease;
+	}
 	.card {
 		position: relative;
 		display: flex;
@@ -74,8 +129,8 @@
 		justify-content: center;
 		border-radius: 5px;
 		max-height: 40rem;
-		margin-top: 2.25rem;
-		margin-bottom: 3.75rem;
+		margin-top: 1rem;
+		margin-bottom: 2rem;
 		padding: 1rem;
 		background-color: #ffffea;
 		box-shadow: 0.5px 0.5px 1.6px rgba(0, 0, 0, 0.022),
@@ -148,12 +203,26 @@
 
 		@media (max-width: 600px) {
 			.chevronRight {
-				display: none;
+				margin-right: 0.25rem;
+				svg {
+					height: 1.5rem;
+					width: auto;
+				}
 			}
 
 			.chevronLeft {
-				display: none;
+				margin-left: 0.25rem;
+				svg {
+					height: 1.5rem;
+					width: auto;
+				}
 			}
+		}
+	}
+
+	@media (max-width: 600px) {
+		.card {
+			padding: 1rem 0;
 		}
 	}
 </style>

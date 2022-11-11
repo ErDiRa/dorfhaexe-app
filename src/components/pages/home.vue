@@ -7,9 +7,9 @@
 	<gallery></gallery>
 	<div :class="$style.socialMedia">
 		<h2 :class="$style.subHeader">
-			Ihr wollt nichts Verpassen und up to date bleiben?
+			Ihr wollt nichts verpassen und up to date bleiben?
 		</h2>
-		<p>Dann Folgt uns einfach auf Facebook oder Instagram</p>
+		<p>Dann folgt uns einfach auf Facebook oder Instagram</p>
 		<div :class="$style.icons">
 			<Facebook
 				:class="$style.facebook"
@@ -53,7 +53,7 @@
 		display: flex;
 		justify-content: left;
 		margin-top: 1.5rem;
-		margin-bottom: 0;	
+		margin-bottom: 0;
 	}
 
 	@media (max-width: 960px) {

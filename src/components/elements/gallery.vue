@@ -4,14 +4,8 @@
 			<ChevronLeft></ChevronLeft>
 		</button>
 		<div v-if="enlarged" :class="$style.backdrop"></div>
-		<Motion
+		<div
 			:key="current"
-			ref="imageContainer"
-			:initial="{ opacity: 0 }"
-			:animate="{
-				opacity: 1
-			}"
-			:exit="{ opacity: 0 }"
 			:class="
 				enlarged
 					? [$style.slide, $style.scaled]
@@ -51,7 +45,7 @@
 				v-show="current === 3"
 				:class="$style.image"
 			/>
-		</Motion>
+		</div>
 		<button @click="nextImage()" :class="$style.chevronRight">
 			<ChevronRight></ChevronRight>
 		</button>
@@ -59,7 +53,6 @@
 </template>
 
 <script setup>
-	import { Motion } from 'motion/vue';
 	import { ref } from 'vue';
 	import ChevronLeft from '../../assets/chevron-left.svg';
 	import ChevronRight from '../../assets/chevron-right.svg';
@@ -147,10 +140,39 @@
 			align-items: center;
 			position: relative;
 			overflow: hidden;
-			max-width: 70%;
+			max-width: 100%;
+			animation-name: fadeIn;
+			animation-duration: 1s;
+			-webkit-animation-name: fadeIn;
+			-webkit-animation-duration: 1s;
+
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+
+			@-webkit-keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
 			.image {
 				max-width: 100%;
-				max-height: 100%;
+				max-height: auto;
+			}
+			.placeholder {
+				max-width: 100%;
+				max-height: auto;
+				opacity: 0;
+				position: absolute;
+				z-index: -1;
 			}
 		}
 

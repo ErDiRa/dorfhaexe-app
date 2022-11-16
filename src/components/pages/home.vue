@@ -18,20 +18,20 @@
 			<!-- <Instagram
 				:class="$style.instagram"
 				@click="
-					openLink(
-						`https://www.instagram.com/explore/tags/geilschdicliquederwelt/`
-					)
+					openLink(`https://instagram.com/dorfhaexe1975?igshid=YmMyMTA2M2Y=`)
 				"
 			/> -->
-			<div
-				:class="$style.card"
-				@click="
-					openLink(
-						`https://www.instagram.com/explore/tags/geilschdicliquederwelt/`
-					)
-				"
-			>
-				<div :class="$style.hashTag">#geilschdicliquederwelt</div>
+
+			<div :class="$style.stamp">
+				<div :class="$style.card">#geilschdicliquederwelt</div>
+
+				<div
+					:class="[$style.card, $style.rubber]"
+					:style="`background-image: url(${rubberImg})`"
+					@click="
+						openLink(`https://instagram.com/dorfhaexe1975?igshid=YmMyMTA2M2Y=`)
+					"
+				></div>
 			</div>
 		</div>
 	</div>
@@ -40,6 +40,7 @@
 <script setup>
 	import Facebook from '../../assets/facebook.svg';
 	// import Instagram from '../../assets/instagram.svg';
+	import rubberImg from '../../assets/rubber.png';
 	import Gallery from '../elements/gallery.vue';
 
 	const openLink = (link) => {
@@ -115,20 +116,28 @@
 				cursor: pointer;
 			}
 
-			.card {
-				display: flex;
-				margin-left: 2.5rem;
-				padding: 0.5rem;
-				border-radius: 3px;
-				margin-top: auto;
-				margin-bottom: auto;
-				transform: rotate(-8deg);
-				color: #f44336;
-				border: 4px solid #f44336;
-				cursor: pointer;
-
-				.hashTag {
+			.stamp {
+				position: relative;
+				.card {
+					display: flex;
+					margin-left: 2.5rem;
+					padding: 0.5rem;
+					border-radius: 3px;
+					transform: rotate(-8deg);
+					color: #f44336;
+					border: 4px solid #f44336;
+					cursor: pointer;
+					position: absolute;
+					top: 0;
+					left: 0;
 					font-weight: 600;
+				}
+				.rubber {
+					border: none;
+					width: 205px;
+					height: 42px;
+					z-index: 7;
+					opacity: 0.5;
 				}
 			}
 

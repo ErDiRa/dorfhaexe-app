@@ -1,0 +1,16 @@
+{
+	"folders" :[
+		{
+			"path": ".",
+			"name":"dorfhaexe-app"
+		},
+		{
+			"path": "./go",
+			"name": "go-tool"
+		},
+		{
+			"path": "./src",
+			"name": "frontend"
+		}
+	]
+}

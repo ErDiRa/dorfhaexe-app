@@ -6,6 +6,8 @@ import Home from './components/pages/home.vue';
 
 import { navigation } from './const/strings';
 
+//TODO: use vue router
+
 // Define some routes
 const routes = {
 	'/': {
@@ -16,7 +18,7 @@ const routes = {
 		path: navigation.dates.ROUTE,
 		component: Dates
 	},
-	'/ueber_uns': {
+	'/vorstandschaft': {
 		path: navigation.about.ROUTE,
 		component: About
 	},

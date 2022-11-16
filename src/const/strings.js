@@ -1,9 +1,11 @@
 const strings_DE = {
 	menu: {
 		HOME: 'Home',
-		ABOUT: 'Über Uns',
+		ABOUT: 'Vorstandschaft',
 		DATES: 'Termine',
-		CONTACT: 'Kontakt'
+		NEWS: 'News',
+		CONTACT: 'Kontakt',
+		HISTORY: 'Geschichtsstunde'
 	}
 };
 
@@ -13,16 +15,24 @@ const navigation = {
 		ROUTE: '/'
 	},
 	about: {
-		NAME: 'Über Uns',
-		ROUTE: '/ueber_uns'
+		NAME: 'Vorstandschaft',
+		ROUTE: '/vorstandschaft'
 	},
 	dates: {
 		NAME: 'Termine',
 		ROUTE: '/termine'
 	},
+	news: {
+		NAME: 'News',
+		ROUTE: '/news'
+	},
 	contact: {
 		NAME: 'Kontakt',
 		ROUTE: '/kontakt'
+	},
+	history: {
+		NAME: 'Geschichtsstunde',
+		ROUTE: '/geschichte'
 	}
 };
 

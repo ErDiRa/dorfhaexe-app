@@ -4,71 +4,89 @@
 			<menu-icon v-if="!isOpen" @click="open" />
 			<close-icon v-else @click="close" />
 		</button>
-		<div v-if="isOpen" :class="$style.menuDropdown">
-			<ul :class="$style.navMenu">
-				<Motion
-					:initial="{ opacity: 0 }"
-					:animate="{
-						opacity: 1
-					}"
-					:exit="{ opacity: 0 }"
-					:class="$style.navContent"
-				>
-					<li>
-						<a
-							@click="navigateTo(navigation.home.ROUTE)"
-							:class="
-								currentView && currentView.path === navigation.home.ROUTE
-									? $style.active
-									: ''
-							"
-							>{{ navigation.home.NAME }}</a
-						>
-					</li>
-					<hr />
-					<li>
-						<a
-							@click="navigateTo(navigation.dates.ROUTE)"
-							:class="
-								currentView && currentView.path === navigation.dates.ROUTE
-									? $style.active
-									: ''
-							"
-							>{{ navigation.dates.NAME }}</a
-						>
-					</li>
-					<hr />
-					<li>
-						<a
-							@click="navigateTo(navigation.about.ROUTE)"
-							:class="
-								currentView && currentView.path === navigation.about.ROUTE
-									? $style.active
-									: ''
-							"
-							>{{ navigation.about.NAME }}</a
-						>
-					</li>
-					<hr />
-					<li>
-						<a
-							@click="navigateTo(navigation.contact.ROUTE)"
-							:class="
-								currentView && currentView.path === navigation.contact.ROUTE
-									? $style.active
-									: ''
-							"
-							>{{ navigation.contact.NAME }}</a
-						>
-					</li>
-				</Motion>
-			</ul>
-		</div>
+		<Transition>
+			<div v-if="isOpen" :class="$style.menuDropdown">
+				<ul :class="$style.navMenu">
+					<div :class="$style.navContent">
+						<li>
+							<a
+								@click="navigateTo(navigation.home.ROUTE)"
+								:class="
+									currentView && currentView.path === navigation.home.ROUTE
+										? $style.active
+										: ''
+								"
+								>{{ navigation.home.NAME }}</a
+							>
+						</li>
+						<hr />
+						<li>
+							<a
+								@click="navigateTo(navigation.dates.ROUTE)"
+								:class="
+									currentView && currentView.path === navigation.dates.ROUTE
+										? $style.active
+										: ''
+								"
+								>{{ navigation.dates.NAME }}</a
+							>
+						</li>
+						<hr />
+						<li>
+							<a
+								@click="navigateTo(navigation.news.ROUTE)"
+								:class="
+									currentView && currentView.path === navigation.news.ROUTE
+										? $style.active
+										: ''
+								"
+								>{{ navigation.news.NAME }}</a
+							>
+						</li>
+						<hr />
+						<li>
+							<a
+								@click="navigateTo(navigation.about.ROUTE)"
+								:class="
+									currentView && currentView.path === navigation.about.ROUTE
+										? $style.active
+										: ''
+								"
+								>{{ navigation.about.NAME }}</a
+							>
+						</li>
+						<hr />
+						<li>
+							<a
+								@click="navigateTo(navigation.contact.ROUTE)"
+								:class="
+									currentView && currentView.path === navigation.contact.ROUTE
+										? $style.active
+										: ''
+								"
+								>{{ navigation.contact.NAME }}</a
+							>
+						</li>
+						<hr />
+						<li>
+							<a
+								@click="navigateTo(navigation.history.ROUTE)"
+								:class="
+									currentView && currentView.path === navigation.history.ROUTE
+										? $style.active
+										: ''
+								"
+								>{{ navigation.history.NAME }}</a
+							>
+						</li>
+					</div>
+				</ul>
+			</div>
+		</Transition>
 	</nav>
 </template>
 
 <script setup>
-	import { Motion } from 'motion/vue';
 	import { inject, ref } from 'vue';
 	import MenuIcon from '../../assets/menu.svg';
 	import CloseIcon from '../../assets/x.svg';
@@ -104,6 +122,13 @@
 					navigation.about.ROUTE
 				);
 				break;
+			case navigation.news.ROUTE:
+				window.history.pushState(
+					'News',
+					navigation.news.NAME,
+					navigation.news.ROUTE
+				);
+				break;
 			case navigation.dates.ROUTE:
 				window.history.pushState(
 					'Dates',
@@ -118,6 +143,13 @@
 					navigation.contact.ROUTE
 				);
 				break;
+			case navigation.history.ROUTE:
+				window.history.pushState(
+					'History',
+					navigation.history.NAME,
+					navigation.history.ROUTE
+				);
+				break;
 			default:
 				break;
 		}
@@ -127,6 +159,17 @@
 		close();
 	};
 </script>
+
+<style>
+	.v-enter-active {
+		transition: opacity 0.3s ease;
+	}
+
+	.v-enter-from,
+	.v-leave-to {
+		opacity: 0;
+	}
+</style>
 
 <style lang="scss" module>
 	.menu {
@@ -161,13 +204,13 @@
 				height: 100vh;
 
 				.navContent {
-					opacity: 0;
+					opacity: 1;
 					transition: opacity 150ms ease-out;
 					hr {
 						border: 0;
 						border-top: 2px solid #bcb9b9;
 						margin: 0 auto;
-						width: 45%;
+						width: 75%;
 					}
 
 					li {

@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "motion": "^10.14.2",
+    "@headlessui/vue": "^1.7.4",
     "vue": "^3.2.37"
   },
   "devDependencies": {

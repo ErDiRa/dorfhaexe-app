@@ -18,6 +18,9 @@
 					:event="val.event"
 					:date="val.date"
 					:time="val.time"
+					:outfit="val.outfit"
+					:meeting-point="val.meeting_point"
+					:ics-file="val.ics_file"
 				></date-item>
 			</div>
 		</div>
@@ -41,9 +44,7 @@
 
 	let isOpen = ref(false);
 
-	const provideDownload = () => {
-		
-	}
+	const provideDownload = () => {};
 
 	const open = () => {
 		isOpen.value = !isOpen.value;

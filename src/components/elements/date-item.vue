@@ -3,12 +3,15 @@
 		<div :class="$style.textFields">
 			<div :class="$style.event">{{ event }}</div>
 			<div :class="$style.meta">{{ date }}</div>
-			<div v-if="time" :class="$style.meta">{{ time }} Uhr</div>
+			<div v-if="time && time !== '-'" :class="$style.meta">{{ time }} Uhr</div>
 			<div v-if="outfit" :class="$style.meta">{{ outfit }}</div>
+			<div v-if="meetingPoint" :class="$style.meta">{{ meetingPoint }}</div>
 		</div>
-		<div :class="$style.icon">
-			<calendar></calendar>
-		</div>
+		<a :href="icsURL" :class="$style.icsLink" download>
+			<div :class="$style.icon">
+				<calendar></calendar>
+			</div>
+		</a>
 	</div>
 </template>
 
@@ -18,10 +21,15 @@
 		event: String,
 		date: String,
 		time: String,
-		outfit: String
+		outfit: String,
+		icsFile: String,
+		meetingPoint: String
 	});
 
-	//TODO: use https://github.com/nwcell/ics.js to provide calender file
+	const icsURL = new URL('/src/assets/' + props.icsFile, import.meta.url);
+
+	//TODO: implement download like this: https://stackoverflow.com/questions/53772331/vue-html-js-how-to-download-a-file-to-browser-using-the-download-tag
+	// so that a dialog window can be shown before downloading
 </script>
 
 <style lang="scss" module>
@@ -35,6 +43,15 @@
 			.event {
 				font-weight: 600;
 				text-align: left;
+				min-width: 34rem;
+				white-space: pre-wrap;
+			}
+
+			@media (max-width: 650px) {
+				.event {
+					max-width: 15rem;
+					min-width: 0;
+				}
 			}
 
 			.meta {
@@ -47,8 +64,15 @@
 			}
 		}
 
-		.icon {
+		.icsLink {
+			color: inherit;
+			display: flex;
 			margin-left: auto;
+			margin-right: 1rem;
+			.icon {
+				margin-left: auto;
+				color: #555555;
+			}
 		}
 	}
 </style>

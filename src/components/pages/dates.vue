@@ -1,6 +1,11 @@
 <template>
 	<main :class="$style.main">
 		<h1>Termine 2022/2023</h1>
+		<p :class="$style.info">
+			Hier findet ihr unseren aktuellen Termine. <br />Vielleicht sieht man sich
+			ja auf hin und wieder auf der ein oder anderen Verstanstaltung. Wir würden
+			uns freuen 🤟.
+		</p>
 		<collapsable
 			:title="'Kampagne'"
 			:data="kampagneData"
@@ -9,13 +14,13 @@
 		</collapsable>
 		<collapsable
 			:title="'Narrenfahrplan'"
-			:data="kampagneData"
+			:data="narrenfahrplanData"
 			:class="$style.collapsable"
 		>
 		</collapsable>
 		<collapsable
 			:title="'Auf-/Abbauplan'"
-			:data="kampagneData"
+			:data="aufabbauData"
 			:class="$style.collapsable"
 		>
 		</collapsable>
@@ -26,7 +31,9 @@
 	import { ref } from 'vue';
 	import Collapsable from '../elements/collapsable.vue';
 
+	import aufabbauData from '../../data/auf-abbau.json';
 	import kampagneData from '../../data/kampagne.json';
+	import narrenfahrplanData from '../../data/narrenfahrplan.json';
 
 	const kampagne = ref(kampagneData);
 </script>
@@ -37,10 +44,30 @@
 		display: flex;
 		flex-direction: column;
 
+		.info {
+			white-space: pre-wrap;
+			min-width: 35rem;
+			max-width: 35rem;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 0;
+			margin-bottom: 2rem;
+			font-size: 1.5rem;
+			line-height: 1.9rem;
+		}
+
+		@media (max-width: 650px) {
+			.info {
+				font-size: 1rem;
+				line-height: 1.4rem;
+				max-width: 21rem;
+				min-width: 0;
+			}
+		}
 		.collapsable {
 			margin-left: auto;
 			margin-right: auto;
-			max-width: 400px;
+			max-width: 600px;
 		}
 
 		.collapsable + .collapsable {

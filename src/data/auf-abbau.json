@@ -1,0 +1,44 @@
+[
+    {
+        "date": "07.01.2023",
+        "event": "Weihnachtsbaumsammlung",
+        "time": "9:00",
+        "meeting_point": "nach Absprache",
+        "ics_file": "ics/auf-abbau/Weihnachtsbaumsammlung-2023-01-07_0923.ics"
+    },
+    {
+        "date": "11.02.2023",
+        "event": "Zeltvorbau stellen, Straßendeko aufhängen, Schilder stellen",
+        "time": "10:00",
+        "meeting_point": "Halle",
+        "ics_file": "ics/auf-abbau/Zeltvorbau stellen, Straßendeko aufhängen, Schilder stellen-2023-02-11_1023.ics"
+    },
+    {
+        "date": "18.02.2023",
+        "event": "Zelt, Zeltvorbau und Schulhof für RoMo richten",
+        "time": "10:00",
+        "meeting_point": "Halle",
+        "ics_file": "ics/auf-abbau/Zelt, Zeltvorbau und Schulhof für RoMo richten-2023-02-18_1023.ics"
+    },
+    {
+        "date": "21.02.2023",
+        "event": "Abbau RoMo",
+        "time": "10:00",
+        "meeting_point": "Halle",
+        "ics_file": "ics/auf-abbau/Abbau RoMo-2023-02-21_1023.ics"
+    },
+    {
+        "date": "16.06.2023",
+        "event": "Aufbau Dorfhock",
+        "time": "18:00",
+        "meeting_point": "Dorfplatz",
+        "ics_file": "ics/auf-abbau/Aufbau Dorfhock-2023-06-16_1823.ics"
+    },
+    {
+        "date": "17.06.2023",
+        "event": "Aufbau Dorfhock",
+        "time": "10:00",
+        "meeting_point": "Dorfplatz",
+        "ics_file": "ics/auf-abbau/Aufbau Dorfhock-2023-06-17_1023.ics"
+    }
+]

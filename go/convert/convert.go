@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"path/filepath"
 	"strings"
 	"time"
 
@@ -32,18 +33,18 @@ func Run(_ map[string]commando.ArgValue, flags map[string]commando.FlagValue) {
 	// get name of all sheets (we only use the first one)
 	sheetList := xls.GetSheetList()
 
-	// Get all the rows in the Sheet1.
-	rows, err := xls.GetRows(sheetList[0])
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
 	narrenfahrplan := []model.Date{}
 	kampagne := []model.Date{}
 	aufAbbau := []model.Date{}
 
-	for _, sheet := range sheetList {
+	for sheetIdx, sheet := range sheetList {
+		// Get all the rows in the Sheet1.
+		rows, err := xls.GetRows(sheetList[sheetIdx])
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+
 		for idx, row := range rows {
 
 			if idx == 0 {
@@ -54,7 +55,7 @@ func Run(_ map[string]commando.ArgValue, flags map[string]commando.FlagValue) {
 			switch sheet {
 			case "Narrenfahrplan":
 				date := model.Date{
-					Date:         clean(row[0]),
+					Date:         format(clean(row[0]), "02.01.2006"),
 					Event:        clean(row[1]),
 					Time:         clean(row[2]),
 					MeetingPoint: clean(row[3]),
@@ -66,9 +67,7 @@ func Run(_ map[string]commando.ArgValue, flags map[string]commando.FlagValue) {
 					dateTime = "12:00"
 				}
 
-				fmt.Println(date.Event, date.Date, dateTime, sheet)
-
-				startTime, err := time.Parse("2006-01-02 15:04", fmt.Sprintf("%s %s", date.Date, dateTime))
+				startTime, err := time.Parse("02.01.2006 15:04", fmt.Sprintf("%s %s", date.Date, dateTime))
 				if err != nil {
 					fmt.Println("could not parse start time", err, date.Event, sheet)
 					return
@@ -84,36 +83,144 @@ func Run(_ map[string]commando.ArgValue, flags map[string]commando.FlagValue) {
 				event.SetEndAt(endTime)
 				event.SetSummary(date.Event)
 				event.SetLocation(date.MeetingPoint)
-				event.SetDescription("Description")
-				event.SetOrganizer("Dorfhäxe Rümmingen 1975 e.V.", ics.WithCN("This Machine"))
+				event.SetOrganizer("Dorfhäxe Rümmingen 1975 e.V.")
 				calendarEvent := cal.Serialize()
 
-				filename := fmt.Sprintf("%s/%s-%s.ics", outputPath, strings.Trim(date.Event, " "), startTime.Format("2006-01-02_1506"))
+				dirPath := fmt.Sprintf("%s/ics/narrenfahrplan", outputPath)
+				_, err = os.Stat(dirPath)
+				if os.IsNotExist(err) {
+					err = os.MkdirAll(dirPath, 0755)
+					if err != nil {
+						fmt.Println("could no create output dir", err, dirPath)
+						return
+					}
+				}
+
+				filename := fmt.Sprintf("%s/%s-%s.ics", dirPath, strings.Trim(date.Event, " "), startTime.Format("2006-01-02_1506"))
 				err = os.WriteFile(filename, []byte(calendarEvent), 0644)
 				if err != nil {
-					fmt.Println("coudl not save ics file for ", date.Event, err)
+					fmt.Println("could not save ics file for ", date.Event, err)
 					return
 				}
-				fmt.Println("saved ics file to ", filename)
+
+				relPath, err := filepath.Rel(outputPath, filename)
+				if err != nil {
+					fmt.Println("could not create relative path", err, filename)
+					return
+				}
+				date.ICSFile = relPath
 
 				narrenfahrplan = append(narrenfahrplan, date)
 
 			case "Kampagne":
 				date := model.Date{
-					Date:  clean(row[0]),
+					Date:  format(clean(row[0]), "02.01.2006"),
 					Event: clean(row[1]),
 					Time:  clean(row[2]),
 				}
+				dateTime := date.Time
+				if dateTime == "-" {
+					dateTime = "12:00"
+				}
+
+				startTime, err := time.Parse("02.01.2006 15:04", fmt.Sprintf("%s %s", date.Date, dateTime))
+				if err != nil {
+					fmt.Println("could not parse start time", err, date.Event, sheet)
+					return
+				}
+				endTime := startTime.Add(1 * time.Hour)
+
+				cal := ics.NewCalendar()
+				cal.SetMethod(ics.MethodRequest)
+				event := cal.AddEvent(date.Event + date.Date)
+				event.SetCreatedTime(time.Now())
+				event.SetDtStampTime(time.Now())
+				event.SetStartAt(startTime)
+				event.SetEndAt(endTime)
+				event.SetSummary(date.Event)
+				event.SetLocation(date.MeetingPoint)
+				event.SetOrganizer("Dorfhäxe Rümmingen 1975 e.V.")
+				calendarEvent := cal.Serialize()
+
+				dirPath := fmt.Sprintf("%s/ics/kampagne", outputPath)
+				_, err = os.Stat(dirPath)
+				if os.IsNotExist(err) {
+					err = os.MkdirAll(dirPath, 0755)
+					if err != nil {
+						fmt.Println("could no create output dir", err, dirPath)
+						return
+					}
+				}
+
+				filename := fmt.Sprintf("%s/%s-%s.ics", dirPath, strings.Trim(date.Event, " "), startTime.Format("2006-01-02_1506"))
+				err = os.WriteFile(filename, []byte(calendarEvent), 0644)
+				if err != nil {
+					fmt.Println("could not save ics file for ", date.Event, err)
+					return
+				}
+
+				relPath, err := filepath.Rel(outputPath, filename)
+				if err != nil {
+					fmt.Println("could not create relative path", err, filename)
+					return
+				}
+				date.ICSFile = relPath
 
 				kampagne = append(kampagne, date)
 			case "Auf-Abbau":
 				date := model.Date{
-					Date:         clean(row[0]),
+					Date:         format(clean(row[0]), "02.01.2006"),
 					Event:        clean(row[1]),
 					Time:         clean(row[2]),
 					MeetingPoint: clean(row[3]),
 				}
+				dateTime := date.Time
+				if dateTime == "-" {
+					dateTime = "12:00"
+				}
 
+				startTime, err := time.Parse("02.01.2006 15:04", fmt.Sprintf("%s %s", date.Date, dateTime))
+				if err != nil {
+					fmt.Println("could not parse start time", err, date.Event, sheet)
+					return
+				}
+				endTime := startTime.Add(1 * time.Hour)
+
+				cal := ics.NewCalendar()
+				cal.SetMethod(ics.MethodRequest)
+				event := cal.AddEvent(date.Event + date.Date)
+				event.SetCreatedTime(time.Now())
+				event.SetDtStampTime(time.Now())
+				event.SetStartAt(startTime)
+				event.SetEndAt(endTime)
+				event.SetSummary(date.Event)
+				event.SetLocation(date.MeetingPoint)
+				event.SetOrganizer("Dorfhäxe Rümmingen 1975 e.V.")
+				calendarEvent := cal.Serialize()
+
+				dirPath := fmt.Sprintf("%s/ics/auf-abbau", outputPath)
+				_, err = os.Stat(dirPath)
+				if os.IsNotExist(err) {
+					err = os.MkdirAll(dirPath, 0755)
+					if err != nil {
+						fmt.Println("could no create output dir", err, dirPath)
+						return
+					}
+				}
+
+				filename := fmt.Sprintf("%s/%s-%s.ics", dirPath, strings.Trim(date.Event, " "), startTime.Format("2006-01-02_1506"))
+				err = os.WriteFile(filename, []byte(calendarEvent), 0644)
+				if err != nil {
+					fmt.Println("could not save ics file for ", date.Event, err)
+					return
+				}
+
+				relPath, err := filepath.Rel(outputPath, filename)
+				if err != nil {
+					fmt.Println("could not create relative path", err, filename)
+					return
+				}
+				date.ICSFile = relPath
 				aufAbbau = append(aufAbbau, date)
 			}
 
@@ -149,4 +256,20 @@ func clean(input string) string {
 	output = strings.Trim(output, " ")
 
 	return output
+}
+
+func format(input, layout string) string {
+
+	if input == "" || input == "-" {
+		return input
+	}
+
+	timeVal, err := time.Parse("2006-01-02", input)
+	if err != nil {
+		fmt.Println("error formatting time: ", err, "input: ", input)
+		return input
+	}
+
+	return timeVal.Format(layout)
+
 }

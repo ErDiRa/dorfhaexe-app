@@ -7,7 +7,7 @@
 			<div v-if="outfit" :class="$style.meta">{{ outfit }}</div>
 			<div v-if="meetingPoint" :class="$style.meta">{{ meetingPoint }}</div>
 		</div>
-		<a :href="icsURL" :class="$style.icsLink" type="text/calendar" download>
+		<a :href="icsURL" :class="$style.icsLink" download>
 			<div :class="$style.icon">
 				<calendar></calendar>
 			</div>

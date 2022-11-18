@@ -9,11 +9,7 @@
 			<ChevronUp v-else :class="$style.chevron"></ChevronUp>
 		</button>
 		<div :class="$style.content" ref="content">
-			<div
-				v-for="val in data"
-				:class="$style.card"
-				@click="provideDownload(val)"
-			>
+			<div v-for="val in data" :class="$style.card">
 				<date-item
 					:event="val.event"
 					:date="val.date"
@@ -33,8 +29,6 @@
 	import ChevronUp from '../../assets/chevron-up.svg';
 	import DateItem from './date-item.vue';
 
-	//TODO: sort data by date
-
 	const content = ref(null);
 
 	const props = defineProps({
@@ -43,8 +37,6 @@
 	});
 
 	let isOpen = ref(false);
-
-	const provideDownload = () => {};
 
 	const open = () => {
 		isOpen.value = !isOpen.value;

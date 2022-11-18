@@ -87,12 +87,20 @@
 </template>
 
 <script setup>
-	import { inject, ref } from 'vue';
+	import { computed } from '@vue/reactivity';
+	import { ref } from 'vue';
+	import { useRoute, useRouter } from 'vue-router';
 	import MenuIcon from '../../assets/menu.svg';
 	import CloseIcon from '../../assets/x.svg';
 	import { navigation } from '../../const/strings';
 
-	let currentView = inject('currentView');
+	const route = useRoute();
+
+	const router = useRouter();
+
+	const currentView = computed(() => {
+		return route.path;
+	});
 
 	const close = () => {
 		isOpen.value = false;
@@ -106,56 +114,8 @@
 		document.documentElement.style.overflow = 'hidden';
 	};
 
-	const navigateTo = (route) => {
-		switch (route) {
-			case navigation.home.ROUTE:
-				window.history.pushState(
-					'Home',
-					navigation.home.NAME,
-					navigation.home.ROUTE
-				);
-				break;
-			case navigation.about.ROUTE:
-				window.history.pushState(
-					'About',
-					navigation.about.NAME,
-					navigation.about.ROUTE
-				);
-				break;
-			case navigation.news.ROUTE:
-				window.history.pushState(
-					'News',
-					navigation.news.NAME,
-					navigation.news.ROUTE
-				);
-				break;
-			case navigation.dates.ROUTE:
-				window.history.pushState(
-					'Dates',
-					navigation.dates.NAME,
-					navigation.dates.ROUTE
-				);
-				break;
-			case navigation.contact.ROUTE:
-				window.history.pushState(
-					'Contact',
-					navigation.contact.NAME,
-					navigation.contact.ROUTE
-				);
-				break;
-			case navigation.history.ROUTE:
-				window.history.pushState(
-					'History',
-					navigation.history.NAME,
-					navigation.history.ROUTE
-				);
-				break;
-			default:
-				break;
-		}
-		// fire the event hashchange to trigger a route change in App.vue as pushState
-		// does not trigger this event
-		window.dispatchEvent(new HashChangeEvent('hashchange'));
+	const navigateTo = (path) => {
+		router.push(path);
 		close();
 	};
 </script>

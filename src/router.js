@@ -1,4 +1,4 @@
-import { onMounted, onUnmounted, ref, shallowRef, watch } from 'vue';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import About from './components/pages/about.vue';
 import Contact from './components/pages/contact.vue';
 import Dates from './components/pages/dates.vue';
@@ -6,50 +6,30 @@ import Home from './components/pages/home.vue';
 
 import { navigation } from './const/strings';
 
-//TODO: use vue router
-
 // Define some routes
-const routes = {
-	'/': {
+const routes = [
+	{
 		path: navigation.home.ROUTE,
 		component: Home
 	},
-	'/termine': {
+	{
 		path: navigation.dates.ROUTE,
 		component: Dates
 	},
-	'/vorstandschaft': {
+	{
 		path: navigation.about.ROUTE,
 		component: About
 	},
-	'/kontakt': {
+	{
 		path: navigation.contact.ROUTE,
 		component: Contact
 	}
-};
+];
 
-export function useRouter() {
-	const currentPath = ref(window.location.pathname);
+const router = createRouter({
+	// 4. Provide the history implementation to use. We are using the hash history for simplicity here.
+	history: createWebHashHistory(),
+	routes
+});
 
-	const setCurrentPath = () => {
-		currentPath.value = window.location.pathname;
-	};
-
-	const currentView = shallowRef(null);
-	watch(
-		() => currentPath.value,
-		(newVal) => {
-			currentView.value = routes[newVal] || null;
-		}
-	);
-
-	onMounted(() => {
-		window.addEventListener('hashchange', setCurrentPath);
-	});
-
-	onUnmounted(() => {
-		window.removeEventListener('hashchange', setCurrentPath);
-	});
-
-	return currentView;
-}
+export default router;

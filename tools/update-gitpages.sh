@@ -2,7 +2,7 @@
 
 cd ../
 
-#yarn build
+yarn build
 
 git add .
 

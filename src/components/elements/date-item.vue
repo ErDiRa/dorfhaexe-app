@@ -26,7 +26,7 @@
 		meetingPoint: String
 	});
 
-	const icsURL = new URL('../../assets/' + props.icsFile, import.meta.url);
+	const icsURL = new URL('../../data/' + props.icsFile, import.meta.url);
 
 	//TODO: implement download like this: https://stackoverflow.com/questions/53772331/vue-html-js-how-to-download-a-file-to-browser-using-the-download-tag
 	// so that a dialog window can be shown before downloading

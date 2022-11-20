@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"path/filepath"
 	"strings"
 	"time"
 
@@ -76,7 +75,7 @@ func Run(_ map[string]commando.ArgValue, flags map[string]commando.FlagValue) {
 
 				cal := ics.NewCalendar()
 				cal.SetMethod(ics.MethodRequest)
-				event := cal.AddEvent(date.Event + date.Date)
+				event := cal.AddEvent(date.Event + "_" + date.Date)
 				event.SetCreatedTime(time.Now())
 				event.SetDtStampTime(time.Now())
 				event.SetStartAt(startTime)
@@ -86,29 +85,8 @@ func Run(_ map[string]commando.ArgValue, flags map[string]commando.FlagValue) {
 				event.SetOrganizer("Dorfhäxe Rümmingen 1975 e.V.")
 				calendarEvent := cal.Serialize()
 
-				dirPath := fmt.Sprintf("%s/ics/narrenfahrplan", outputPath)
-				_, err = os.Stat(dirPath)
-				if os.IsNotExist(err) {
-					err = os.MkdirAll(dirPath, 0755)
-					if err != nil {
-						fmt.Println("could no create output dir", err, dirPath)
-						return
-					}
-				}
-
-				filename := fmt.Sprintf("%s/%s-%s.ics", dirPath, strings.Trim(date.Event, " "), startTime.Format("2006-01-02_1506"))
-				err = os.WriteFile(filename, []byte(calendarEvent), 0644)
-				if err != nil {
-					fmt.Println("could not save ics file for ", date.Event, err)
-					return
-				}
-
-				relPath, err := filepath.Rel(outputPath, filename)
-				if err != nil {
-					fmt.Println("could not create relative path", err, filename)
-					return
-				}
-				date.ICSFile = relPath
+				date.ICSFile = calendarEvent
+				date.ICSFileName = date.Event + "_" + date.Date + ".ics"
 
 				narrenfahrplan = append(narrenfahrplan, date)
 
@@ -132,7 +110,7 @@ func Run(_ map[string]commando.ArgValue, flags map[string]commando.FlagValue) {
 
 				cal := ics.NewCalendar()
 				cal.SetMethod(ics.MethodRequest)
-				event := cal.AddEvent(date.Event + date.Date)
+				event := cal.AddEvent(date.Event + "_" + date.Date)
 				event.SetCreatedTime(time.Now())
 				event.SetDtStampTime(time.Now())
 				event.SetStartAt(startTime)
@@ -142,31 +120,11 @@ func Run(_ map[string]commando.ArgValue, flags map[string]commando.FlagValue) {
 				event.SetOrganizer("Dorfhäxe Rümmingen 1975 e.V.")
 				calendarEvent := cal.Serialize()
 
-				dirPath := fmt.Sprintf("%s/ics/kampagne", outputPath)
-				_, err = os.Stat(dirPath)
-				if os.IsNotExist(err) {
-					err = os.MkdirAll(dirPath, 0755)
-					if err != nil {
-						fmt.Println("could no create output dir", err, dirPath)
-						return
-					}
-				}
-
-				filename := fmt.Sprintf("%s/%s-%s.ics", dirPath, strings.Trim(date.Event, " "), startTime.Format("2006-01-02_1506"))
-				err = os.WriteFile(filename, []byte(calendarEvent), 0644)
-				if err != nil {
-					fmt.Println("could not save ics file for ", date.Event, err)
-					return
-				}
-
-				relPath, err := filepath.Rel(outputPath, filename)
-				if err != nil {
-					fmt.Println("could not create relative path", err, filename)
-					return
-				}
-				date.ICSFile = relPath
+				date.ICSFile = calendarEvent
+				date.ICSFileName = date.Event + "_" + date.Date + ".ics"
 
 				kampagne = append(kampagne, date)
+
 			case "Auf-Abbau":
 				date := model.Date{
 					Date:         format(clean(row[0]), "02.01.2006"),
@@ -188,7 +146,7 @@ func Run(_ map[string]commando.ArgValue, flags map[string]commando.FlagValue) {
 
 				cal := ics.NewCalendar()
 				cal.SetMethod(ics.MethodRequest)
-				event := cal.AddEvent(date.Event + date.Date)
+				event := cal.AddEvent(date.Event + "_" + date.Date)
 				event.SetCreatedTime(time.Now())
 				event.SetDtStampTime(time.Now())
 				event.SetStartAt(startTime)
@@ -198,29 +156,8 @@ func Run(_ map[string]commando.ArgValue, flags map[string]commando.FlagValue) {
 				event.SetOrganizer("Dorfhäxe Rümmingen 1975 e.V.")
 				calendarEvent := cal.Serialize()
 
-				dirPath := fmt.Sprintf("%s/ics/auf-abbau", outputPath)
-				_, err = os.Stat(dirPath)
-				if os.IsNotExist(err) {
-					err = os.MkdirAll(dirPath, 0755)
-					if err != nil {
-						fmt.Println("could no create output dir", err, dirPath)
-						return
-					}
-				}
-
-				filename := fmt.Sprintf("%s/%s-%s.ics", dirPath, strings.Trim(date.Event, " "), startTime.Format("2006-01-02_1506"))
-				err = os.WriteFile(filename, []byte(calendarEvent), 0644)
-				if err != nil {
-					fmt.Println("could not save ics file for ", date.Event, err)
-					return
-				}
-
-				relPath, err := filepath.Rel(outputPath, filename)
-				if err != nil {
-					fmt.Println("could not create relative path", err, filename)
-					return
-				}
-				date.ICSFile = relPath
+				date.ICSFile = calendarEvent
+				date.ICSFileName = date.Event + "_" + date.Date + ".ics"
 				aufAbbau = append(aufAbbau, date)
 			}
 

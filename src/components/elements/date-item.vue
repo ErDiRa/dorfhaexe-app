@@ -7,7 +7,12 @@
 			<div v-if="outfit" :class="$style.meta">{{ outfit }}</div>
 			<div v-if="meetingPoint" :class="$style.meta">{{ meetingPoint }}</div>
 		</div>
-		<a :href="icsURL" :class="$style.icsLink" type="text/calendar" download>
+		<a
+			ref="downloadTag"
+			@click="download"
+			:class="$style.icsLink"
+			type="text/calendar"
+		>
 			<div :class="$style.icon">
 				<calendar></calendar>
 			</div>
@@ -16,6 +21,7 @@
 </template>
 
 <script setup>
+	import { onMounted, ref } from 'vue';
 	import Calendar from '../../assets/calendar.svg';
 	const props = defineProps({
 		event: String,
@@ -23,10 +29,21 @@
 		time: String,
 		outfit: String,
 		icsFile: String,
+		icsFileName: String,
 		meetingPoint: String
 	});
 
-	const icsURL = new URL('../../data/' + props.icsFile, import.meta.url);
+	const downloadTag = ref(null);
+
+	onMounted(() => {
+		if (downloadTag) {
+			downloadTag.value.setAttribute(
+				'href',
+				'data:text/calendar;charset=utf-8,' + encodeURIComponent(props.icsFile)
+			);
+			downloadTag.value.setAttribute('download', props.icsFileName);
+		}
+	});
 
 	//TODO: implement download like this: https://stackoverflow.com/questions/53772331/vue-html-js-how-to-download-a-file-to-browser-using-the-download-tag
 	// so that a dialog window can be shown before downloading

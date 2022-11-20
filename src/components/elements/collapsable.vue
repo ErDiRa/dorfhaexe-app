@@ -17,6 +17,7 @@
 					:outfit="val.outfit"
 					:meeting-point="val.meeting_point"
 					:ics-file="val.ics_file"
+					:ics-file-name="val.ics_file_name"
 				></date-item>
 			</div>
 		</div>

@@ -7,4 +7,5 @@ type Date struct {
 	Outfit       string `json:"outfit,omitempty"`
 	MeetingPoint string `json:"meeting_point,omitempty"`
 	ICSFile      string `json:"ics_file,omitempty"`
+	ICSFileName string `json:"ics_file_name,omitempty"`
 }

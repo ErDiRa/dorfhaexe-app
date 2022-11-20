@@ -4,41 +4,47 @@
         "event": "Weihnachtsbaumsammlung",
         "time": "9:00",
         "meeting_point": "nach Absprache",
-        "ics_file": "ics/auf-abbau/Weihnachtsbaumsammlung-2023-01-07_0923.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Weihnachtsbaumsammlung_07.01.2023\r\nCREATED:20221120T091649Z\r\nDTSTAMP:20221120T091649Z\r\nDTSTART:20230107T090000Z\r\nDTEND:20230107T100000Z\r\nSUMMARY:Weihnachtsbaumsammlung\r\nLOCATION:nach Absprache\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Weihnachtsbaumsammlung_07.01.2023.ics"
     },
     {
         "date": "11.02.2023",
         "event": "Zeltvorbau stellen, Straßendeko aufhängen, Schilder stellen",
         "time": "10:00",
         "meeting_point": "Halle",
-        "ics_file": "ics/auf-abbau/Zeltvorbau stellen, Straßendeko aufhängen, Schilder stellen-2023-02-11_1023.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Zeltvorbau stellen, Straßendeko aufhängen, Schilder\r\n  stellen_11.02.2023\r\nCREATED:20221120T091649Z\r\nDTSTAMP:20221120T091649Z\r\nDTSTART:20230211T100000Z\r\nDTEND:20230211T110000Z\r\nSUMMARY:Zeltvorbau stellen\\, Straßendeko aufhängen\\, Schilder stellen\r\nLOCATION:Halle\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Zeltvorbau stellen, Straßendeko aufhängen, Schilder stellen_11.02.2023.ics"
     },
     {
         "date": "18.02.2023",
         "event": "Zelt, Zeltvorbau und Schulhof für RoMo richten",
         "time": "10:00",
         "meeting_point": "Halle",
-        "ics_file": "ics/auf-abbau/Zelt, Zeltvorbau und Schulhof für RoMo richten-2023-02-18_1023.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Zelt, Zeltvorbau und Schulhof für RoMo richten_18.02.2023\r\nCREATED:20221120T091649Z\r\nDTSTAMP:20221120T091649Z\r\nDTSTART:20230218T100000Z\r\nDTEND:20230218T110000Z\r\nSUMMARY:Zelt\\, Zeltvorbau und Schulhof für RoMo richten\r\nLOCATION:Halle\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Zelt, Zeltvorbau und Schulhof für RoMo richten_18.02.2023.ics"
     },
     {
         "date": "21.02.2023",
         "event": "Abbau RoMo",
         "time": "10:00",
         "meeting_point": "Halle",
-        "ics_file": "ics/auf-abbau/Abbau RoMo-2023-02-21_1023.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Abbau RoMo_21.02.2023\r\nCREATED:20221120T091649Z\r\nDTSTAMP:20221120T091649Z\r\nDTSTART:20230221T100000Z\r\nDTEND:20230221T110000Z\r\nSUMMARY:Abbau RoMo\r\nLOCATION:Halle\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Abbau RoMo_21.02.2023.ics"
     },
     {
         "date": "16.06.2023",
         "event": "Aufbau Dorfhock",
         "time": "18:00",
         "meeting_point": "Dorfplatz",
-        "ics_file": "ics/auf-abbau/Aufbau Dorfhock-2023-06-16_1823.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Aufbau Dorfhock_16.06.2023\r\nCREATED:20221120T091649Z\r\nDTSTAMP:20221120T091649Z\r\nDTSTART:20230616T180000Z\r\nDTEND:20230616T190000Z\r\nSUMMARY:Aufbau Dorfhock\r\nLOCATION:Dorfplatz\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Aufbau Dorfhock_16.06.2023.ics"
     },
     {
         "date": "17.06.2023",
         "event": "Aufbau Dorfhock",
         "time": "10:00",
         "meeting_point": "Dorfplatz",
-        "ics_file": "ics/auf-abbau/Aufbau Dorfhock-2023-06-17_1023.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Aufbau Dorfhock_17.06.2023\r\nCREATED:20221120T091649Z\r\nDTSTAMP:20221120T091649Z\r\nDTSTART:20230617T100000Z\r\nDTEND:20230617T110000Z\r\nSUMMARY:Aufbau Dorfhock\r\nLOCATION:Dorfplatz\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Aufbau Dorfhock_17.06.2023.ics"
     }
 ]

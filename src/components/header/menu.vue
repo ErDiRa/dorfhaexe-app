@@ -138,6 +138,7 @@
 			position: relative;
 			border: 0;
 			background-color: transparent;
+			color: inherit;
 			z-index: 502;
 		}
 

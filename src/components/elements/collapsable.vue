@@ -61,6 +61,7 @@
 		justify-content: flex-start;
 		align-items: center;
 		padding: 1rem;
+		color: inherit;
 		cursor: pointer;
 		box-shadow: 0.5px 0.5px 1.6px rgba(0, 0, 0, 0.022),
 			1.1px 1.1px 2.4px rgba(0, 0, 0, 0.031),

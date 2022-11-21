@@ -1,40 +1,44 @@
 <template>
-	<h1 :class="$style.header">Dorfhäxe Rümmingen 1975 e.V.</h1>
-	<!--TODO: add emblem-->
-	<p :class="$style.welcome">
-		Herzlich Willkommen und viel Spass auf unserer Homepage
-	</p>
-	<gallery></gallery>
-	<div :class="$style.socialMedia">
-		<h2 :class="$style.subHeader">
-			Ihr wollt nichts verpassen und up to date bleiben?
-		</h2>
-		<p>Dann folgt uns einfach auf Facebook oder Instagram</p>
-		<div :class="$style.icons">
-			<Facebook
-				:class="$style.facebook"
-				@click="openLink(`https://de-de.facebook.com/dorfhaexe/`)"
-			/>
-			<!-- <Instagram
+	<main>
+		<h1 :class="$style.header">Dorfhäxe Rümmingen 1975 e.V.</h1>
+		<!--TODO: add emblem-->
+		<p :class="$style.welcome">
+			Herzlich Willkommen und viel Spass auf unserer Homepage
+		</p>
+		<gallery></gallery>
+		<div :class="$style.socialMedia">
+			<h2 :class="$style.subHeader">
+				Ihr wollt nichts verpassen und up to date bleiben?
+			</h2>
+			<p>Dann folgt uns einfach auf Facebook oder Instagram</p>
+			<div :class="$style.icons">
+				<Facebook
+					:class="$style.facebook"
+					@click="openLink(`https://de-de.facebook.com/dorfhaexe/`)"
+				/>
+				<!-- <Instagram
 				:class="$style.instagram"
 				@click="
 					openLink(`https://instagram.com/dorfhaexe1975?igshid=YmMyMTA2M2Y=`)
 				"
 			/> -->
 
-			<div :class="$style.stamp">
-				<div :class="$style.card">#geilschdicliquederwelt</div>
+				<div :class="$style.stamp">
+					<div :class="$style.card">#geilschdicliquederwelt</div>
 
-				<div
-					:class="[$style.card, $style.rubber]"
-					:style="`background-image: url(${rubberImg})`"
-					@click="
-						openLink(`https://instagram.com/dorfhaexe1975?igshid=YmMyMTA2M2Y=`)
-					"
-				></div>
+					<div
+						:class="[$style.card, $style.rubber]"
+						:style="`background-image: url(${rubberImg})`"
+						@click="
+							openLink(
+								`https://instagram.com/dorfhaexe1975?igshid=YmMyMTA2M2Y=`
+							)
+						"
+					></div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</main>
 </template>
 
 <script setup>

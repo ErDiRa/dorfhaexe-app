@@ -2,9 +2,9 @@
 	<main :class="$style.main">
 		<h1>Termine 2022/2023</h1>
 		<p :class="$style.info">
-			Hier findet ihr unseren aktuellen Termine. <br />Vielleicht sieht man sich
-			ja auf hin und wieder auf der ein oder anderen Verstanstaltung. Wir würden
-			uns freuen 🤟.
+			Hier findet ihr unsere aktuellen Termine. <br />Vielleicht sieht man sich
+			ja hin und wieder auf der ein oder anderen Verstanstaltung. Wir würden uns
+			freuen 🤟.
 		</p>
 		<collapsable
 			:title="'Kampagne'"

@@ -1,20 +1,29 @@
 <template>
 	<div :class="$style.dateElement">
 		<div :class="$style.textFields">
-			<div :class="$style.event">{{ event }}</div>
-			<div :class="$style.meta">{{ date }}</div>
-			<div v-if="time && time !== '-'" :class="$style.meta">{{ time }} Uhr</div>
-			<div v-if="outfit" :class="$style.meta">{{ outfit }}</div>
-			<div v-if="meetingPoint" :class="$style.meta">{{ meetingPoint }}</div>
+			<div :class="$style.event">
+				<span>{{ event }}</span>
+			</div>
+			<div :class="$style.meta">
+				<calendar :class="$style.metaIcon"></calendar>
+				<span>{{ date }}</span>
+			</div>
+			<div v-if="time && time !== '-'" :class="$style.meta">
+				<clock :class="$style.metaIcon"></clock>
+				<span>{{ time }} Uhr</span>
+			</div>
+			<div v-if="outfit" :class="$style.meta">
+				<user :class="$style.metaIcon"></user>
+				<span>{{ outfit }}</span>
+			</div>
+			<div v-if="meetingPoint" :class="$style.meta">
+				<map-pin :class="$style.metaIcon"></map-pin>
+				<span>{{ meetingPoint }}</span>
+			</div>
 		</div>
-		<a
-			ref="downloadTag"
-			@click="download"
-			:class="$style.icsLink"
-			type="text/calendar"
-		>
+		<a ref="downloadTag" :class="$style.icsLink" type="text/calendar">
 			<div :class="$style.icon">
-				<calendar></calendar>
+				<download></download>
 			</div>
 		</a>
 	</div>
@@ -23,6 +32,10 @@
 <script setup>
 	import { onMounted, ref } from 'vue';
 	import Calendar from '../../assets/calendar.svg';
+	import Clock from '../../assets/clock.svg';
+	import Download from '../../assets/download.svg';
+	import MapPin from '../../assets/map.svg';
+	import user from '../../assets/user.svg';
 	const props = defineProps({
 		event: String,
 		date: String,
@@ -74,6 +87,12 @@
 			.meta {
 				color: #605b5b;
 				font-weight: 500;
+
+				.metaIcon {
+					width: 12px;
+					height: 12px;
+					margin-right: 0.5rem;
+				}
 			}
 
 			div + div {
@@ -85,7 +104,7 @@
 			color: inherit;
 			display: flex;
 			margin-left: auto;
-			margin-right: 1rem;
+			margin-right: 0.5rem;
 			.icon {
 				margin-left: auto;
 				color: #555555;

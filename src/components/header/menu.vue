@@ -12,7 +12,7 @@
 							<a
 								@click="navigateTo(navigation.home.ROUTE)"
 								:class="
-									currentView && currentView.path === navigation.home.ROUTE
+									currentView && currentView === navigation.home.ROUTE
 										? $style.active
 										: ''
 								"
@@ -24,7 +24,7 @@
 							<a
 								@click="navigateTo(navigation.dates.ROUTE)"
 								:class="
-									currentView && currentView.path === navigation.dates.ROUTE
+									currentView && currentView === navigation.dates.ROUTE
 										? $style.active
 										: ''
 								"
@@ -36,7 +36,7 @@
 							<a
 								@click="navigateTo(navigation.news.ROUTE)"
 								:class="
-									currentView && currentView.path === navigation.news.ROUTE
+									currentView && currentView === navigation.news.ROUTE
 										? $style.active
 										: ''
 								"
@@ -48,7 +48,7 @@
 							<a
 								@click="navigateTo(navigation.about.ROUTE)"
 								:class="
-									currentView && currentView.path === navigation.about.ROUTE
+									currentView && currentView === navigation.about.ROUTE
 										? $style.active
 										: ''
 								"
@@ -60,7 +60,7 @@
 							<a
 								@click="navigateTo(navigation.contact.ROUTE)"
 								:class="
-									currentView && currentView.path === navigation.contact.ROUTE
+									currentView && currentView === navigation.contact.ROUTE
 										? $style.active
 										: ''
 								"
@@ -72,7 +72,7 @@
 							<a
 								@click="navigateTo(navigation.history.ROUTE)"
 								:class="
-									currentView && currentView.path === navigation.history.ROUTE
+									currentView && currentView === navigation.history.ROUTE
 										? $style.active
 										: ''
 								"
@@ -99,6 +99,7 @@
 	const router = useRouter();
 
 	const currentView = computed(() => {
+		console.log(route.path);
 		return route.path;
 	});
 

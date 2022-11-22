@@ -5,6 +5,6 @@ import svgLoader from 'vite-svg-loader';
 // https://vitejs.dev/config/
 export default defineConfig({
 	base: '/dorfhaexe-app/',
-	assetsInclude: ['**/*.JPG', '**/*.PNG'],
+	assetsInclude: ['**/*.JPG', '**/*.png', '**/*.pdf'],
 	plugins: [vue(), svgLoader()]
 });

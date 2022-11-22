@@ -36,7 +36,7 @@
 	const openPDF = () => {};
 
 	const src = ref(
-		new URL('../../data/' + 'ElfterimElften.pdf', import.meta.url)
+		new URL('../../assets/' + 'ElfterimElften.pdf', import.meta.url)
 	);
 </script>
 

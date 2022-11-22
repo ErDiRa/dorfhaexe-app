@@ -26,18 +26,17 @@
 		}
 
 		p {
+			text-align: left;
 			font-size: 2rem;
 			line-height: 2.3rem;
 		}
 
 		@media (max-width: 600px) {
 			h1 {
-				text-align: left;
 				font-size: 1.5rem;
 			}
 
 			p {
-				text-align: left;
 				font-size: 1rem;
 				line-height: 1.3rem;
 			}

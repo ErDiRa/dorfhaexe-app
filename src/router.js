@@ -3,6 +3,7 @@ import About from './components/pages/about.vue';
 import Contact from './components/pages/contact.vue';
 import Dates from './components/pages/dates.vue';
 import Home from './components/pages/home.vue';
+import News from './components/pages/news.vue';
 
 import { navigation } from './const/strings';
 
@@ -15,6 +16,10 @@ const routes = [
 	{
 		path: navigation.dates.ROUTE,
 		component: Dates
+	},
+	{
+		path: navigation.news.ROUTE,
+		component: News
 	},
 	{
 		path: navigation.about.ROUTE,

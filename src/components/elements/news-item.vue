@@ -16,7 +16,7 @@
 					:class="$style.image"
 				/>
 				<a :href="src" target="_blank">
-					<div :class="$style.iconContainer" @click="openPDF">
+					<div :class="$style.iconContainer">
 						<maximize :class="$style.maximize"></maximize>
 					</div>
 				</a>
@@ -33,8 +33,8 @@
 	import NewsNovemberLarge from '../../assets/new-november-2400w.png';
 	import NewsNovemberTiny from '../../assets/new-november-780w.png';
 
-	const openPDF = () => {};
-
+	// TODO: use a blob to lazy load pdf to prevent loading per default from assets
+	// TODO: checkout how hosting on ionos work to provide resources
 	const src = ref(
 		new URL('../../assets/' + 'ElfterimElften.pdf', import.meta.url)
 	);

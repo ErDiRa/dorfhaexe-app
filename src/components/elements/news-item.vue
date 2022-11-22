@@ -35,8 +35,12 @@
 
 	// TODO: use a blob to lazy load pdf to prevent loading per default from assets
 	// TODO: checkout how hosting on ionos work to provide resources
+	// TODO: add base url in href
 	const src = ref(
-		new URL('../../assets/' + 'ElfterimElften.pdf', import.meta.url)
+		new URL(
+			'../../dorfhaexe-app/assets/' + 'ElfterimElften.pdf',
+			import.meta.url
+		)
 	);
 </script>
 

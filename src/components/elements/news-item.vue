@@ -15,7 +15,7 @@
 									${NewsNovemberLarge} 2400w`"
 					:class="$style.image"
 				/>
-				<a :href="src" target="_blank">
+				<a :href="pdf" target="_blank">
 					<div :class="$style.iconContainer">
 						<maximize :class="$style.maximize"></maximize>
 					</div>
@@ -26,19 +26,12 @@
 </template>
 
 <script setup>
-	import { ref } from 'vue';
+	import pdf from '../../assets/ElfterimElften.pdf';
 	import Maximize from '../../assets/maximize.svg';
 	import NewsNovemberSmall from '../../assets/new-november-1024w.png';
 	import NewsNovemberMedium from '../../assets/new-november-1440w.png';
 	import NewsNovemberLarge from '../../assets/new-november-2400w.png';
 	import NewsNovemberTiny from '../../assets/new-november-780w.png';
-
-	// TODO: use a blob to lazy load pdf to prevent loading per default from assets
-	// TODO: checkout how hosting on ionos work to provide resources
-	// TODO: add base url in href
-	const src = ref(
-		new URL('../../assets/' + 'ElfterimElften.pdf', import.meta.url)
-	);
 </script>
 
 <style lang="scss" module>

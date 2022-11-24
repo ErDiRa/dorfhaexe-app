@@ -104,11 +104,13 @@
 		left: 0;
 		background-color: rgba(0, 0, 0, 0.5);
 		transition: all 0.25s ease;
+		z-index: 500;
 	}
 
 	.scaled {
 		transform: scale(1.5);
 		transition: 0.25s ease;
+		z-index: 501;
 	}
 
 	.unscaled {

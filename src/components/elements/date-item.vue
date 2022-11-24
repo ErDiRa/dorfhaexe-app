@@ -75,6 +75,7 @@
 				text-align: left;
 				min-width: 34rem;
 				white-space: pre-wrap;
+				margin-bottom: 0.5rem;
 			}
 
 			@media (max-width: 650px) {

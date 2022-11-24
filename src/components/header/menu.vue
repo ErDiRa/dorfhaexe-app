@@ -164,6 +164,7 @@
 				border: 1px solid #f6d7cd;
 				width: 100vw;
 				height: 100vh;
+				overflow: scroll;
 
 				.navContent {
 					opacity: 1;
@@ -173,6 +174,7 @@
 						border-top: 2px solid #bcb9b9;
 						margin: 0 auto;
 						width: 75%;
+						max-width: 900px;
 					}
 
 					li {

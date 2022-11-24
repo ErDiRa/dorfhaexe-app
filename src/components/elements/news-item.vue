@@ -37,10 +37,7 @@
 	// TODO: checkout how hosting on ionos work to provide resources
 	// TODO: add base url in href
 	const src = ref(
-		new URL(
-			'../../dorfhaexe-app/assets/' + 'ElfterimElften.pdf',
-			import.meta.url
-		)
+		new URL('../../assets/' + 'ElfterimElften.pdf', import.meta.url)
 	);
 </script>
 
@@ -48,7 +45,7 @@
 	.container {
 		border-bottom: 1px solid #bdbdbd;
 		border-top: 1px solid #bdbdbd;
-		padding: 0.5rem;
+		padding: 1rem;
 
 		.content {
 			display: flex;
@@ -132,6 +129,12 @@
 			.content {
 				flex-direction: column;
 			}
+		}
+	}
+
+	@media (max-width: 600px) {
+		.container {
+			padding: 0.75rem 0.5rem;
 		}
 	}
 </style>

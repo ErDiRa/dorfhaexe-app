@@ -1,6 +1,6 @@
 <template>
 	<main :class="$style.main">
-		<h1>Termine 2022/2023</h1>
+		<h1 :class="$style.title">Termine 2022/2023</h1>
 		<p :class="$style.info">
 			Hier findet ihr unsere aktuellen Termine. <br />Vielleicht sieht man sich
 			ja hin und wieder auf der ein oder anderen Verstanstaltung. Wir würden uns
@@ -44,8 +44,18 @@
 		display: flex;
 		flex-direction: column;
 
+		.title {
+			font-size: 2.5rem;
+		}
+
+		@media (max-width: 600px) {
+			.title {
+				font-size: 1.5rem;
+			}
+		}
+
 		.info {
-			white-space: pre-wrap;
+			white-space: inherit;
 			min-width: 35rem;
 			max-width: 35rem;
 			margin-left: auto;

@@ -1,0 +1,52 @@
+[
+	{
+		"name": "Marco Pollini",
+		"position": "1. Vorstand",
+		"profileImg": "/assets/1_vorstand.png"
+	},
+	{
+		"name": "Sören Brunner",
+		"position": "2. Vorstand",
+		"profileImg": "/assets/2_vorstand.png"
+	},
+	{
+		"name": "Harald Pollini",
+		"position": "Ehrenvorstand",
+		"profileImg": "/assets/ehrenvorstand.png"
+	},
+	{
+		"name": "Ines Pollini",
+		"position": "1. Schriführerin",
+		"profileImg": "/assets/1_schriftfuehrer.png"
+	},
+	{
+		"name": "Nino Pollini",
+		"position": "2. Schriführer",
+		"profileImg": "/assets/2_schriftfuehrer.png"
+	},
+	{
+		"name": "Bettina Baier",
+		"position": "1. Kassiererin",
+		"profileImg": "/assets/1_kassierer.png"
+	},
+	{
+		"name": "Lisa Schauer",
+		"position": "2. Kassiererin",
+		"profileImg": "/assets/2_kassierer.png"
+	},
+	{
+		"name": "Simon Keller",
+		"position": "Aktivbeisitzer",
+		"profileImg": "/assets/aktivbeisitzer.png"
+	},
+	{
+		"name": "Gaby Hofman",
+		"position": "Requisitenverwalterin",
+		"profileImg": "/assets/requisite.png"
+	},
+	{
+		"name": "Markus Schwabe",
+		"position": "Passivbeisitzer",
+		"profileImg": "/assets/passivbeisitzer.png"
+	}
+]

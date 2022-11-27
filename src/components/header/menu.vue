@@ -99,7 +99,6 @@
 	const router = useRouter();
 
 	const currentView = computed(() => {
-		console.log(route.path);
 		return route.path;
 	});
 

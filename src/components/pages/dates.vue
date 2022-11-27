@@ -80,7 +80,7 @@
 		.info {
 			white-space: inherit;
 			margin-top: 0;
-			margin-bottom: 2rem;
+			margin-bottom: 1.5rem;
 			font-size: 1.5rem;
 			line-height: 1.9rem;
 			text-align: left;

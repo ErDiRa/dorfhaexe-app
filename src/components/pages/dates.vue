@@ -6,23 +6,44 @@
 			ja hin und wieder auf der ein oder anderen Verstanstaltung. Wir würden uns
 			freuen 🤟.
 		</p>
-		<collapsable
-			:title="'Kampagne'"
-			:data="kampagneData"
-			:class="$style.collapsable"
-		>
+		<collapsable :title="'Kampagne'" :class="$style.collapsable">
+			<div v-for="val in kampagneData" :class="$style.card">
+				<date-item
+					:event="val.event"
+					:date="val.date"
+					:time="val.time"
+					:outfit="val.outfit"
+					:meeting-point="val.meeting_point"
+					:ics-file="val.ics_file"
+					:ics-file-name="val.ics_file_name"
+				></date-item>
+			</div>
 		</collapsable>
-		<collapsable
-			:title="'Narrenfahrplan'"
-			:data="narrenfahrplanData"
-			:class="$style.collapsable"
-		>
+		<collapsable :title="'Narrenfahrplan'" :class="$style.collapsable">
+			<div v-for="val in narrenfahrplanData" :class="$style.card">
+				<date-item
+					:event="val.event"
+					:date="val.date"
+					:time="val.time"
+					:outfit="val.outfit"
+					:meeting-point="val.meeting_point"
+					:ics-file="val.ics_file"
+					:ics-file-name="val.ics_file_name"
+				></date-item>
+			</div>
 		</collapsable>
-		<collapsable
-			:title="'Auf-/Abbauplan'"
-			:data="aufabbauData"
-			:class="$style.collapsable"
-		>
+		<collapsable :title="'Auf-/Abbauplan'" :class="$style.collapsable">
+			<div v-for="val in aufabbauData" :class="$style.card">
+				<date-item
+					:event="val.event"
+					:date="val.date"
+					:time="val.time"
+					:outfit="val.outfit"
+					:meeting-point="val.meeting_point"
+					:ics-file="val.ics_file"
+					:ics-file-name="val.ics_file_name"
+				></date-item>
+			</div>
 		</collapsable>
 	</main>
 </template>
@@ -30,6 +51,7 @@
 <script setup>
 	import { ref } from 'vue';
 	import Collapsable from '../elements/collapsable.vue';
+	import DateItem from '../elements/date-item.vue';
 
 	import aufabbauData from '../../data/auf-abbau.json';
 	import kampagneData from '../../data/kampagne.json';
@@ -78,67 +100,26 @@
 			margin-left: auto;
 			margin-right: auto;
 			max-width: 600px;
+
+			.card {
+				position: relative;
+				display: flex;
+				cursor: pointer;
+				flex-direction: column;
+				align-content: center;
+				justify-content: center;
+				border-bottom: 1px solid #e2e0e0;
+				max-height: 40rem;
+				padding: 1rem;
+				background: #ffffea;
+			}
+			.card:hover {
+				background-color: #eaead585;
+			}
 		}
 
 		.collapsable + .collapsable {
 			margin-top: 0.5rem;
 		}
-	}
-	.tabList {
-		box-sizing: border-box;
-		border: 0 solid #e5e7eb;
-		display: flex;
-		padding: 0.25rem;
-		border-radius: 0.5rem;
-		background-color: rgba(189, 189, 189, 0.251);
-		.tab {
-			background-color: transparent;
-			background-image: none;
-			border-style: none;
-			border-radius: 0.5rem;
-			padding-top: 0.75rem;
-			padding-bottom: 0.75rem;
-			font-size: 1.5rem;
-			line-height: 1.25rem;
-			font-weight: 600;
-			line-height: 1.25rem;
-			width: 100%;
-		}
-
-		.tab + .tab {
-			margin-left: 0.25rem;
-		}
-		.selected {
-			background-color: #ffffff;
-			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
-				0 1px 2px 0 rgba(0, 0, 0, 0.06);
-		}
-
-		.unselected {
-			color: #9a9c9f;
-			:hover {
-				color: #ffffff;
-			}
-		}
-	}
-
-	.card {
-		position: relative;
-		display: flex;
-		align-content: center;
-		justify-content: center;
-		border-radius: 5px;
-		max-height: 40rem;
-		padding: 1rem;
-		background-color: #ffffea;
-		box-shadow: 0.5px 0.5px 1.6px rgba(0, 0, 0, 0.022),
-			1.1px 1.1px 2.4px rgba(0, 0, 0, 0.031),
-			2.3px 2.4px 4.5px rgba(0, 0, 0, 0.039),
-			5.7px 5.9px 21.3px rgba(0, 0, 0, 0.048),
-			36px 37px 80px rgba(0, 0, 0, 0.07);
-	}
-
-	.card + .card {
-		margin-top: 0.75rem;
 	}
 </style>

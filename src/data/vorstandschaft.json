@@ -1,4 +1,6 @@
-[
+
+{
+"main":[
 	{
 		"name": "Marco Pollini",
 		"position": "1. Vorstand",
@@ -16,12 +18,12 @@
 	},
 	{
 		"name": "Ines Pollini",
-		"position": "1. Schriführerin",
+		"position": "1. Schriftführerin",
 		"profileImg": "/assets/1_schriftfuehrer.png"
 	},
 	{
 		"name": "Nino Pollini",
-		"position": "2. Schriführer",
+		"position": "2. Schriftführer",
 		"profileImg": "/assets/2_schriftfuehrer.png"
 	},
 	{
@@ -49,4 +51,23 @@
 		"position": "Passivbeisitzer",
 		"profileImg": "/assets/passivbeisitzer.png"
 	}
+],
+"support": [
+	{
+		"name": "Michael Wild",
+		"position": "Vorstand",
+		"profileImg": "/assets/vorstand_förder.png"
+	},
+	{
+		"name": "Maja Baier",
+		"position": "Kassiererin",
+		"profileImg": "/assets/kassierer_förder.png"
+	},
+	{
+		"name": "Cornelia Wild",
+		"position": "Schriftführerin",
+		"profileImg": "/assets/schriftführer_förder.png"
+	}
 ]
+
+}

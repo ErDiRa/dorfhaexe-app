@@ -1,45 +1,99 @@
 <template>
 	<main :class="$style.main">
-		<person-card
-			:class="$style.card"
-			v-for="person in mainClub"
-			:person="person"
+		<h1>Vorstandschaft</h1>
+		<p>Hier erhaltet ihr einen Überblick über die aktuelle Vorstandschaft</p>
+		<header-collapsable
+			:title="'Hauptverein'"
+			:init-is-open="true"
+			:class="$style.collapsable"
 		>
-		</person-card>
+			<div :class="$style.content">
+				<person-card
+					:class="$style.card"
+					v-for="person in board.main"
+					:person="person"
+				>
+				</person-card>
+			</div>
+		</header-collapsable>
+		<header-collapsable
+			:title="'Förderverein'"
+			:init-is-open="true"
+			:class="$style.collapsable"
+		>
+			<div :class="$style.content">
+				<person-card
+					:class="$style.card"
+					v-for="person in board.support"
+					:person="person"
+				>
+				</person-card>
+			</div>
+		</header-collapsable>
 	</main>
 </template>
 
 <script setup>
-	import vorstandschaftJSON from '../../data/vorstandschaft.json';
+	import boardJSON from '../../data/vorstandschaft.json';
+	import HeaderCollapsable from '../elements/header-collapsable.vue';
 	import PersonCard from '../elements/person-card.vue';
 
-	let mainClub = JSON.parse(JSON.stringify(vorstandschaftJSON));
+	let board = JSON.parse(JSON.stringify(boardJSON));
 </script>
 
 <style lang="scss" module>
 	.main {
 		min-height: 100vh;
 		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		flex-direction: row;
-		padding: 0 10rem;
-
-		.card {
-			width: 260px;
+		h1 {
+			text-align: left;
 		}
-	}
 
-	@media (max-width: 650px) {
-		.main {
-			display: block;
-			padding: 0;
-			.card {
-				width: 260px;
-				margin-bottom: 0.5rem;
-				margin-left: auto;
-				margin-right: auto;
+		p {
+			text-align: left;
+			font-size: 1.5rem;
+			margin-top: 0;
+		}
+
+		@media (max-width: 600px) {
+			h1 {
+				font-size: 1rem;
 			}
+
+			p {
+				font-size: 1rem;
+			}
+		}
+
+		.collapsable {
+			.content {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				flex-direction: row;
+				padding: 0 10rem;
+
+				.card {
+					width: 260px;
+				}
+			}
+
+			@media (max-width: 950px) {
+				.content {
+					display: block;
+					padding: 0;
+					.card {
+						width: 260px;
+						margin-bottom: 0.5rem;
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}
+			}
+		}
+
+		.collapsable + .collapsable {
+			margin-top: 1rem;
 		}
 	}
 </style>

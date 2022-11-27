@@ -38,7 +38,7 @@
 	.container {
 		border-bottom: 1px solid #bdbdbd;
 		border-top: 1px solid #bdbdbd;
-		padding: 1rem;
+		padding: 1rem 0;
 
 		.content {
 			display: flex;
@@ -67,7 +67,7 @@
 				p {
 					margin: 0;
 					margin-top: 1rem;
-					line-height: 1.3rem;
+					line-height: 2rem;
 					text-align: left;
 				}
 

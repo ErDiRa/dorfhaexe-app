@@ -105,7 +105,6 @@
 			color: inherit;
 			display: flex;
 			margin-left: auto;
-			margin-right: 0.5rem;
 			.icon {
 				margin-left: auto;
 				color: #555555;

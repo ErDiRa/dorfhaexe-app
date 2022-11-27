@@ -6,7 +6,7 @@
 			ja hin und wieder auf der ein oder anderen Verstanstaltung. Wir würden uns
 			freuen 🤟.
 		</p>
-		<collapsable :title="'Kampagne'" :class="$style.collapsable">
+		<header-collapsable :title="'Kampagne'" :class="$style.collapsable">
 			<div v-for="val in kampagneData" :class="$style.card">
 				<date-item
 					:event="val.event"
@@ -18,8 +18,8 @@
 					:ics-file-name="val.ics_file_name"
 				></date-item>
 			</div>
-		</collapsable>
-		<collapsable :title="'Narrenfahrplan'" :class="$style.collapsable">
+		</header-collapsable>
+		<header-collapsable :title="'Narrenfahrplan'" :class="$style.collapsable">
 			<div v-for="val in narrenfahrplanData" :class="$style.card">
 				<date-item
 					:event="val.event"
@@ -31,8 +31,8 @@
 					:ics-file-name="val.ics_file_name"
 				></date-item>
 			</div>
-		</collapsable>
-		<collapsable :title="'Auf-/Abbauplan'" :class="$style.collapsable">
+		</header-collapsable>
+		<header-collapsable :title="'Auf-/Abbauplan'" :class="$style.collapsable">
 			<div v-for="val in aufabbauData" :class="$style.card">
 				<date-item
 					:event="val.event"
@@ -44,14 +44,14 @@
 					:ics-file-name="val.ics_file_name"
 				></date-item>
 			</div>
-		</collapsable>
+		</header-collapsable>
 	</main>
 </template>
 
 <script setup>
 	import { ref } from 'vue';
-	import Collapsable from '../elements/collapsable.vue';
 	import DateItem from '../elements/date-item.vue';
+	import HeaderCollapsable from '../elements/header-collapsable.vue';
 
 	import aufabbauData from '../../data/auf-abbau.json';
 	import kampagneData from '../../data/kampagne.json';
@@ -68,6 +68,7 @@
 
 		.title {
 			font-size: 2.5rem;
+			text-align: left;
 		}
 
 		@media (max-width: 600px) {
@@ -78,14 +79,11 @@
 
 		.info {
 			white-space: inherit;
-			min-width: 35rem;
-			max-width: 35rem;
-			margin-left: auto;
-			margin-right: auto;
 			margin-top: 0;
 			margin-bottom: 2rem;
 			font-size: 1.5rem;
 			line-height: 1.9rem;
+			text-align: left;
 		}
 
 		@media (max-width: 650px) {
@@ -97,10 +95,6 @@
 			}
 		}
 		.collapsable {
-			margin-left: auto;
-			margin-right: auto;
-			max-width: 600px;
-
 			.card {
 				position: relative;
 				display: flex;
@@ -112,6 +106,20 @@
 				max-height: 40rem;
 				padding: 1rem;
 				background: #ffffea;
+				max-width: 40rem;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.card:first-child {
+				margin-top: 16px;
+				border-top-left-radius: 8px;
+				border-top-right-radius: 8px;
+			}
+
+			.card:last-child {
+				border-bottom-left-radius: 8px;
+				border-bottom-right-radius: 8px;
 			}
 			.card:hover {
 				background-color: #eaead585;

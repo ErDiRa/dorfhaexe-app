@@ -1,7 +1,9 @@
 <template>
 	<main :class="$style.main">
 		<h1>Vorstandschaft</h1>
-		<p>Hier erhaltet ihr einen Überblick über die aktuelle Vorstandschaft</p>
+		<p>
+			Hier erhaltet ihr einen Überblick über unsere symbadische Chefetage 👑
+		</p>
 		<header-collapsable
 			:title="'Hauptverein'"
 			:init-is-open="true"

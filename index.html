@@ -1,14 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-   <base href="/dorfhaexe-app/">
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/dorfhaexe-emblem.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dorfhäxe Rümmingen 1975 e.V.</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+	<head>
+		<base href="/dorfhaexe-app/" />
+		<meta charset="UTF-8" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/src/assets/dorfhaexe-emblem.svg"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dorfhäxe Rümmingen 1975 e.V.</title>
+	</head>
+	<body>
+		<div id="app"></div>
+		<noscript>
+			<div
+				style="
+					font-family: Archivo, Avenir, Helvetica, Arial, sans-serif;
+					display: flex;
+					width: 100%;
+					max-width: 400px;
+					margin: auto;
+					height: 100vh;
+				"
+			>
+				<div
+					style="
+						position: fixed;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						background-color: rgba(0, 0, 0, 0.7);
+					"
+				></div>
+				<div
+					style="
+						margin: auto;
+						background-color: #fef7f7;
+						padding: 32px;
+						z-index: 300;
+						border-radius: 8px;
+					"
+				>
+					<div>
+						Es tut uns Leid, aber leider funktioniert unsere Seite momentan
+						nicht ohne Javascript. Wenn ihr unsere Seite gerne nutzen möchtet,
+						aktiviert doch einfach Javascript in eurem Browser.
+						<div style="display: flex; margin-top: 16px; align-items: center">
+							<span style="font-weight: 600">
+								Eure Dorfhäxe Rümmingen 1975 e.V.
+							</span>
+							<div>
+								<img
+									src="/src/assets/dorfhaexe-emblem.svg"
+									style="margin-left: 16px"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</noscript>
+		<script type="module" src="/src/main.js"></script>
+	</body>
 </html>

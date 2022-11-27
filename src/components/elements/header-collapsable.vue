@@ -83,8 +83,6 @@
 			overflow: hidden;
 			transition: max-height 0.2s ease-out;
 			border-radius: 5px;
-			border-top-left-radius: 0;
-			border-top-right-radius: 0;
 		}
 	}
 </style>

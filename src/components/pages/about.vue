@@ -19,7 +19,7 @@
 		<header-collapsable
 			:title="'Förderverein'"
 			:init-is-open="true"
-			:class="$style.collapsable"
+			:class="[$style.collapsable, $style.footerGap]"
 		>
 			<div :class="$style.content">
 				<person-card
@@ -72,6 +72,7 @@
 				flex-wrap: wrap;
 				flex-direction: row;
 				padding: 0 10rem;
+				margin-top: 1rem;
 
 				.card {
 					width: 260px;
@@ -95,5 +96,9 @@
 		.collapsable + .collapsable {
 			margin-top: 1rem;
 		}
+	}
+
+	.footerGap {
+		margin-bottom: 4rem;
 	}
 </style>

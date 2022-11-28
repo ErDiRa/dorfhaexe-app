@@ -26,7 +26,7 @@
 
 					<p>
 						<strong>Rechtliche Angaben</strong><br />
-						Vertretungsberechtigter: Simon Keller<br />
+						Vertretungsberechtigter: Marco Pollini<br />
 						Registergericht: Amtsgericht Lörrach Registernummer: VR 793
 					</p>
 					<p>
@@ -167,12 +167,6 @@
 
 			a + a {
 				margin-left: 1rem;
-			}
-		}
-
-		.modal {
-			.content {
-				overflow: auto;
 			}
 		}
 	}

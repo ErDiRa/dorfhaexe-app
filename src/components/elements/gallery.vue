@@ -134,6 +134,7 @@
 			36px 37px 80px rgba(0, 0, 0, 0.07);
 
 		.slide {
+			max-width: 100%;
 			border-radius: 5px;
 			color: var(--white);
 			display: flex;
@@ -141,7 +142,6 @@
 			align-items: center;
 			position: relative;
 			overflow: hidden;
-			max-width: 100%;
 			animation-name: fadeIn;
 			animation-duration: 1s;
 			-webkit-animation-name: fadeIn;

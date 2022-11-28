@@ -152,7 +152,7 @@
 			.navMenu {
 				display: flex;
 				flex-direction: column;
-				padding: 6rem 2rem 2rem 2rem;
+				padding: 5rem 2rem 2rem 2rem;
 				margin-top: 0;
 				margin-bottom: 0;
 				position: fixed;

@@ -16,10 +16,10 @@
 
 			<!-- Full-screen container to center the panel -->
 			<div :class="$style.content">
+				<close-icon :class="$style.closeIcon" @click="emitClose"></close-icon>
 				<!-- The actual dialog panel -->
 				<DialogPanel :class="$style.panel">
 					<DialogTitle><slot name="title"></slot></DialogTitle>
-
 					<slot name="content"></slot>
 				</DialogPanel>
 			</div>
@@ -34,6 +34,8 @@
 		DialogTitle,
 		TransitionRoot
 	} from '@headlessui/vue';
+
+	import CloseIcon from '../../assets/x.svg';
 
 	const emits = defineEmits(['close']);
 
@@ -69,8 +71,12 @@
 		opacity: 1 !important;
 	}
 	.modal {
-		position: relative;
+		position: fixed;
 		z-index: 50;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
 		.backdrop {
 			position: fixed;
 			top: 0;
@@ -81,24 +87,30 @@
 		}
 
 		.content {
-			display: flex;
-			position: fixed;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			justify-content: center;
-			align-items: center;
-			overflow: auto;
-			width: auto;
+			position: relative;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 0.25rem;
+			width: 95%;
+			line-height: 1.5rem;
+
+			.closeIcon {
+				position: absolute;
+				top: 20px;
+				right: 20px;
+				z-index: 500;
+			}
 
 			.panel {
+				width: 100%;
+				position: relative;
 				background-color: #ffffff;
-				width: auto;
-				max-width: 960px;
 				border-radius: 0.25rem;
-				padding: 2rem;
+				padding: 2rem 3rem;
 				background-color: #fef7f7;
+				max-height: 95vh;
+				overflow: scroll;
 			}
 		}
 	}

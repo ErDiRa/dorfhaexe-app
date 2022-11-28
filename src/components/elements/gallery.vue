@@ -108,7 +108,7 @@
 	}
 
 	.scaled {
-		transform: scale(1.5);
+		transform: scale(1.2);
 		transition: 0.25s ease;
 		z-index: 501;
 	}
@@ -126,7 +126,6 @@
 		max-height: 40rem;
 		margin-top: 1rem;
 		margin-bottom: 2rem;
-		padding: 1rem;
 		background-color: #ffffea;
 		box-shadow: 0.5px 0.5px 1.6px rgba(0, 0, 0, 0.022),
 			1.1px 1.1px 2.4px rgba(0, 0, 0, 0.031),
@@ -185,19 +184,32 @@
 			margin-bottom: 1rem;
 			border-style: none;
 			background-color: transparent;
+			position: absolute;
+			left: 0;
+			top: 38%;
 			cursor: pointer;
+			z-index: 5;
 			svg {
 				height: 48px;
 				width: 48px;
 				stroke-width: 3;
 				padding: 0.2rem;
 				color: white;
-				background-color: rgba(0, 0, 0, 0.4);
+				background-color: rgba(0, 0, 0, 0.25);
 				border-radius: 5px;
 			}
 
 			svg:hover {
 				background-color: rgba(0, 0, 0, 0.8);
+			}
+		}
+		@media (max-width: 600px) {
+			.chevronLeft {
+				margin-left: 0.5rem;
+				svg {
+					height: 32px;
+					width: 32px;
+				}
 			}
 		}
 
@@ -209,14 +221,17 @@
 			border-style: none;
 			background-color: transparent;
 			cursor: pointer;
-
+			position: absolute;
+			right: 0;
+			top: 38%;
+			z-index: 5;
 			svg {
 				height: 48px;
 				width: 48px;
 				stroke-width: 3;
 				padding: 0.2rem;
 				color: white;
-				background-color: rgba(0, 0, 0, 0.4);
+				background-color: rgba(0, 0, 0, 0.25);
 				border-radius: 5px;
 			}
 
@@ -224,29 +239,14 @@
 				background-color: rgba(0, 0, 0, 0.8);
 			}
 		}
-
 		@media (max-width: 600px) {
 			.chevronRight {
-				margin-right: 0.25rem;
+				margin-right: 0.5rem;
 				svg {
-					height: 1.5rem;
-					width: auto;
+					height: 32px;
+					width: 32px;
 				}
 			}
-
-			.chevronLeft {
-				margin-left: 0.25rem;
-				svg {
-					height: 1.5rem;
-					width: auto;
-				}
-			}
-		}
-	}
-
-	@media (max-width: 600px) {
-		.card {
-			padding: 1rem 0;
 		}
 	}
 </style>

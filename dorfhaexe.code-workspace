@@ -12,5 +12,8 @@
 			"path": "./src",
 			"name": "frontend"
 		}
-	]
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "dorfhaexe-app"
+	}
 }

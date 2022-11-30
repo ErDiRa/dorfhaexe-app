@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 import About from './components/pages/about.vue';
 import Contact from './components/pages/contact.vue';
 import Dates from './components/pages/dates.vue';
+import History from './components/pages/history.vue';
 import Home from './components/pages/home.vue';
 import News from './components/pages/news.vue';
 
@@ -28,6 +29,10 @@ const routes = [
 	{
 		path: navigation.contact.ROUTE,
 		component: Contact
+	},
+	{
+		path: navigation.history.ROUTE,
+		component: History
 	}
 ];
 

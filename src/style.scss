@@ -10,6 +10,9 @@ body {
   font-family: Archivo, Avenir, Helvetica, Arial, sans-serif;
   display: flex;
   min-height: 100vh;
+  // fixes weird vh behaviour mobile devices
+  // https://allthingssmitty.com/2020/05/11/css-fix-for-100vh-in-mobile-webkit/
+  min-height: -webkit-fill-available;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;

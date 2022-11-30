@@ -16,12 +16,6 @@
 					:class="$style.facebook"
 					@click="openLink(`https://de-de.facebook.com/dorfhaexe/`)"
 				/>
-				<!-- <Instagram
-				:class="$style.instagram"
-				@click="
-					openLink(`https://instagram.com/dorfhaexe1975?igshid=YmMyMTA2M2Y=`)
-				"
-			/> -->
 
 				<div :class="$style.stamp">
 					<div :class="$style.card">#geilschdicliquederwelt</div>

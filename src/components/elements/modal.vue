@@ -110,7 +110,13 @@
 				padding: 2rem 3rem;
 				background-color: #fef7f7;
 				max-height: 95vh;
+				height: -webkit-fill-available;
 				overflow: scroll;
+			}
+			@media (hover: none), (hover: on-demand) {
+				.panel {
+					max-height: 80vh;
+				}
 			}
 		}
 	}

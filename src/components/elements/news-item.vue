@@ -76,6 +76,11 @@
 						font-size: 1rem;
 						line-height: 1.3rem;
 					}
+
+					p {
+						font-size: 1rem;
+						line-height: 1.3rem;
+					}
 				}
 			}
 

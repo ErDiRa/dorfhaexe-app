@@ -99,7 +99,7 @@
 				Häxen immer sehr viel Spaß und Freude dabei! Wenn Ihr an einer
 				Mitgliedschaft der Dorfhäxe Rümmingen 1975 e.V. interessiert seid,
 				kontaktiert uns doch einfach über unsere
-				<router-link to="/kontakt">Kontakt Möglichkeiten.</router-link>
+				<router-link to="/kontakt">Kontaktmöglichkeiten.</router-link>
 
 			  <div :class="$style.bye">
 					Eure Dorfhäxe Rümmingen 1975 e.V.

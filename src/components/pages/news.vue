@@ -2,8 +2,11 @@
 	<main :class="$style.main">
 		<h1>#Häxe-News</h1>
 		<p>
-			Kein Facebook und kein Instagram ?! Kein Problem unsere aktuellsten News
-			erhaltet ihr auch hier. 🤓
+			Kein
+			<a href="https://de-de.facebook.com/dorfhaexe/">Facebook</a>? Kein
+			<a href="https://instagram.com/dorfhaexe1975?igshid=YmMyMTA2M2Y="
+				>Instagram</a
+			>? <br />Kein Problem unsere aktuellsten News erhaltet ihr auch hier. 🤓
 		</p>
 		<news-item></news-item>
 	</main>
@@ -28,7 +31,10 @@
 		p {
 			text-align: left;
 			font-size: 2rem;
-			line-height: 2.3rem;
+			line-height: 2.8rem;
+			a {
+				color: inherit;
+			}
 		}
 
 		@media (max-width: 600px) {

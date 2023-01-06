@@ -15,7 +15,7 @@
 			</a>
 		</p>
 		<p>
-			<p>Oder mit per Post an:</p>
+			<p>Oder per Post an:</p>
 			<div :class="$style.contact">
 				Dorfhäxe Rümmingen 1975 e.V.<br />
 				Lörracher Str. 1 <br />

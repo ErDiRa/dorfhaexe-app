@@ -23,11 +23,7 @@
 					<div
 						:class="[$style.card, $style.rubber]"
 						:style="`background-image: url(${rubberImg})`"
-						@click="
-							openLink(
-								`https://instagram.com/dorfhaexe1975?igshid=YmMyMTA2M2Y=`
-							)
-						"
+						@click="openLink(`https://instagram.com/dorfhaexe1975`)"
 					></div>
 				</div>
 			</div>

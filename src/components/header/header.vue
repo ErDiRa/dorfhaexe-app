@@ -1,7 +1,7 @@
 <template>
 	<div :class="$style.container">
 		<div :class="$style.logo">
-			<haexe-logo></haexe-logo>
+			<haexe-logo @click="router.push(navigation.home.ROUTE)"></haexe-logo>
 		</div>
 		<menu-view
 			@navigate-to="(route) => $emit('navigateTo', route)"
@@ -12,8 +12,12 @@
 </template>
 
 <script setup>
+	import { useRouter } from 'vue-router';
 	import HaexeLogo from '../../assets/dorfhaexe-emblem.svg';
+	import { navigation } from '../../const/strings';
 	import MenuView from './menu.vue';
+
+	const router = useRouter();
 </script>
 
 <style lang="scss" module>

@@ -36,6 +36,12 @@ func Run(_ map[string]commando.ArgValue, flags map[string]commando.FlagValue) {
 	kampagne := []model.Date{}
 	aufAbbau := []model.Date{}
 
+	location, err := time.LoadLocation("Europe/Berlin")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
 	for sheetIdx, sheet := range sheetList {
 		// Get all the rows in the Sheet1.
 		rows, err := xls.GetRows(sheetList[sheetIdx])
@@ -66,7 +72,7 @@ func Run(_ map[string]commando.ArgValue, flags map[string]commando.FlagValue) {
 					dateTime = "12:00"
 				}
 
-				startTime, err := time.Parse("02.01.2006 15:04", fmt.Sprintf("%s %s", date.Date, dateTime))
+				startTime, err := time.ParseInLocation("02.01.2006 15:04", fmt.Sprintf("%s %s", date.Date, dateTime), location)
 				if err != nil {
 					fmt.Println("could not parse start time", err, date.Event, sheet)
 					return
@@ -101,7 +107,7 @@ func Run(_ map[string]commando.ArgValue, flags map[string]commando.FlagValue) {
 					dateTime = "12:00"
 				}
 
-				startTime, err := time.Parse("02.01.2006 15:04", fmt.Sprintf("%s %s", date.Date, dateTime))
+				startTime, err := time.ParseInLocation("02.01.2006 15:04", fmt.Sprintf("%s %s", date.Date, dateTime), location)
 				if err != nil {
 					fmt.Println("could not parse start time", err, date.Event, sheet)
 					return
@@ -137,7 +143,7 @@ func Run(_ map[string]commando.ArgValue, flags map[string]commando.FlagValue) {
 					dateTime = "12:00"
 				}
 
-				startTime, err := time.Parse("02.01.2006 15:04", fmt.Sprintf("%s %s", date.Date, dateTime))
+				startTime, err := time.ParseInLocation("02.01.2006 15:04", fmt.Sprintf("%s %s", date.Date, dateTime), location)
 				if err != nil {
 					fmt.Println("could not parse start time", err, date.Event, sheet)
 					return

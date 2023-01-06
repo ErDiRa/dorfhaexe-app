@@ -9,13 +9,37 @@
 			<div :class="$style.thumbnail">
 				<img
 					:src="NewsNovemberTiny"
-					:srcset="`${NewsNovemberSmall} 780w,
+					:srcset="`${NewsNovemberTiny} 780w,
 									${NewsNovemberSmall} 1024w,
 									${NewsNovemberMedium} 1440w,
 									${NewsNovemberLarge} 2400w`"
 					:class="$style.image"
 				/>
-				<a :href="pdf" target="_blank">
+				<a :href="pdfNov" target="_blank">
+					<div :class="$style.iconContainer">
+						<maximize :class="$style.maximize"></maximize>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div :class="$style.container">
+		<div :class="$style.content">
+			<div :class="$style.text">
+				<h1 :class="$style.title">Ausgabe #2 - Januar 2023</h1>
+				<h1>Neues Jahr bedeutet Vollgas! 🏎️💨</h1>
+				<p>Mit dem neuen Jahr starten die Fasnachts-Events</p>
+			</div>
+			<div :class="$style.thumbnail">
+				<img
+					:src="NewsNovemberTiny"
+					:srcset="`${NewsJanuaryTiny} 780w,
+									${NewsJanuarySmall} 1024w,
+									${NewsJanuaryMedium} 1440w,
+									${NewsJanuaryLarge} 2400w`"
+					:class="$style.image"
+				/>
+				<a :href="pdfJan" target="_blank">
 					<div :class="$style.iconContainer">
 						<maximize :class="$style.maximize"></maximize>
 					</div>
@@ -26,12 +50,17 @@
 </template>
 
 <script setup>
-	import pdf from '../../assets/ElfterimElften.pdf';
+	import pdfNov from '../../assets/ElfterimElften.pdf';
+	import pdfJan from '../../assets/january.pdf';
 	import Maximize from '../../assets/maximize.svg';
 	import NewsNovemberSmall from '../../assets/new-november-1024w.png';
 	import NewsNovemberMedium from '../../assets/new-november-1440w.png';
 	import NewsNovemberLarge from '../../assets/new-november-2400w.png';
 	import NewsNovemberTiny from '../../assets/new-november-780w.png';
+	import NewsJanuarySmall from '../../assets/news-january-1024w.png';
+	import NewsJanuaryMedium from '../../assets/news-january-1440w.png';
+	import NewsJanuaryLarge from '../../assets/news-january-2400w.png';
+	import NewsJanuaryTiny from '../../assets/news-january-780w.png';
 </script>
 
 <style lang="scss" module>
@@ -128,6 +157,10 @@
 				flex-direction: column;
 			}
 		}
+	}
+
+	.container + .container {
+		border-top: none;
 	}
 
 	@media (max-width: 600px) {

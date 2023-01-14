@@ -60,6 +60,7 @@
 
 			.chevron {
 				margin-left: auto;
+				margin-right: 0.5rem;
 			}
 		}
 

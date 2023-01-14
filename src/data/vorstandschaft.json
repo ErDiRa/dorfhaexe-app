@@ -4,69 +4,69 @@
 	{
 		"name": "Marco Pollini",
 		"position": "1. Vorstand",
-		"profileImg": "/assets/1_vorstand.png"
+		"profileImg": "../../assets/1_vorstand.JPG"
 	},
 	{
 		"name": "Sören Brunner",
 		"position": "2. Vorstand",
-		"profileImg": "/assets/2_vorstand.png"
+		"profileImg": "../../assets/2te_vorstand.JPG"
 	},
 	{
 		"name": "Harald Pollini",
 		"position": "Ehrenvorstand",
-		"profileImg": "/assets/ehrenvorstand.png"
+		"profileImg": "../../assets/ehrenvorstand.JPG"
 	},
 	{
 		"name": "Ines Pollini",
 		"position": "1. Schriftführerin",
-		"profileImg": "/assets/1_schriftfuehrer.png"
+		"profileImg": "../../assets/1_schriftfuehrer.JPG"
 	},
 	{
 		"name": "Nino Pollini",
 		"position": "2. Schriftführer",
-		"profileImg": "/assets/2_schriftfuehrer.png"
+		"profileImg": "../../assets/2_schriftfuehrer.JPG"
 	},
 	{
 		"name": "Bettina Baier",
 		"position": "1. Kassiererin",
-		"profileImg": "/assets/1_kassierer.png"
+		"profileImg": "../../assets/1_kassierer.JPG"
 	},
 	{
 		"name": "Lisa Schauer",
 		"position": "2. Kassiererin",
-		"profileImg": "/assets/2_kassierer.png"
+		"profileImg": "../../assets/2_kassierer.JPG"
 	},
 	{
 		"name": "Simon Keller",
 		"position": "Aktivbeisitzer",
-		"profileImg": "/assets/aktivbeisitzer.png"
+		"profileImg": "../../assets/aktivbeisitzer.JPG"
 	},
 	{
 		"name": "Gaby Hofman",
 		"position": "Requisitenverwalterin",
-		"profileImg": "/assets/requisite.png"
+		"profileImg": "../../assets/requisite.JPG"
 	},
 	{
 		"name": "Markus Schwabe",
 		"position": "Passivbeisitzer",
-		"profileImg": "/assets/passivbeisitzer.png"
+		"profileImg": "../../assets/passivbeisitzer.JPG"
 	}
 ],
 "support": [
 	{
 		"name": "Michael Wild",
 		"position": "Vorstand",
-		"profileImg": "/assets/vorstand_förder.png"
+		"profileImg": "../../assets/vorstand_foerder.JPG"
 	},
 	{
 		"name": "Maja Baier",
 		"position": "Kassiererin",
-		"profileImg": "/assets/kassierer_förder.png"
+		"profileImg": "../../assets/kassierer_foerder.JPG"
 	},
 	{
 		"name": "Cornelia Wild",
 		"position": "Schriftführerin",
-		"profileImg": "/assets/schriftführer_förder.png"
+		"profileImg": "../../assets/schriftführer_foerder.JPG"
 	}
 ]
 

@@ -77,7 +77,7 @@
 				margin-top: 1rem;
 
 				.card {
-					width: 260px;
+					width: 220px;
 				}
 			}
 
@@ -86,7 +86,7 @@
 					display: block;
 					padding: 0;
 					.card {
-						width: 260px;
+						width: 220px;
 						margin-bottom: 0.5rem;
 						margin-left: auto;
 						margin-right: auto;

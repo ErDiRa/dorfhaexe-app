@@ -118,12 +118,12 @@
     },
     {
         "date": "16.02.2023",
-        "event": "Schlüsselübergabe\u0026Hemdglunkiumzug Rümmingen (anschl.Verheinsheim)",
+        "event": "Schlüsselübergabe \u0026 Hemdglunkiumzug Rümmingen (anschl.Verheinsheim)",
         "time": "18:00",
         "outfit": "Glunki",
         "meeting_point": "Rathaus",
         "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Schlüsselübergabe\u0026Hemdglunkiumzug Rümmingen\r\n  (anschl.Verheinsheim)_16.02.2023\r\nCREATED:20230102T211825Z\r\nDTSTAMP:20230102T211825Z\r\nDTSTART:20230216T170000Z\r\nDTEND:20230216T180000Z\r\nSUMMARY:Schlüsselübergabe\u0026Hemdglunkiumzug Rümmingen\r\n  (anschl.Verheinsheim)\r\nLOCATION:Rathaus\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
-        "ics_file_name": "Schlüsselübergabe\u0026Hemdglunkiumzug Rümmingen (anschl.Verheinsheim)_16.02.2023.ics"
+        "ics_file_name": "Schlüsselübergabe \u0026 Hemdglunkiumzug Rümmingen (anschl.Verheinsheim)_16.02.2023.ics"
     },
     {
         "date": "17.02.2023",

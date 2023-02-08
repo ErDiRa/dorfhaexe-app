@@ -7,7 +7,7 @@
 			freuen 🤟.
 		</p>
 		<header-collapsable :title="'Kampagne'" :class="$style.collapsable">
-			<div v-for="val in kampagneData" :class="$style.card">
+			<div v-for="val in kampagneDataFiltered" :class="$style.card">
 				<date-item
 					:event="val.event"
 					:date="val.date"
@@ -20,7 +20,7 @@
 			</div>
 		</header-collapsable>
 		<header-collapsable :title="'Narrenfahrplan'" :class="$style.collapsable">
-			<div v-for="val in narrenfahrplanData" :class="$style.card">
+			<div v-for="val in narrenfahrplanDataFiltered" :class="$style.card">
 				<date-item
 					:event="val.event"
 					:date="val.date"
@@ -33,7 +33,7 @@
 			</div>
 		</header-collapsable>
 		<header-collapsable :title="'Auf-/Abbauplan'" :class="$style.collapsable">
-			<div v-for="val in aufabbauData" :class="$style.card">
+			<div v-for="val in aufabbauDataFiltered" :class="$style.card">
 				<date-item
 					:event="val.event"
 					:date="val.date"
@@ -49,7 +49,7 @@
 </template>
 
 <script setup>
-	import { ref } from 'vue';
+	import { computed, ref } from 'vue';
 	import DateItem from '../elements/date-item.vue';
 	import HeaderCollapsable from '../elements/header-collapsable.vue';
 
@@ -58,6 +58,28 @@
 	import narrenfahrplanData from '../../data/narrenfahrplan.json';
 
 	const kampagne = ref(kampagneData);
+
+	const afterOrEqualToday = (date) => {
+		const now = Date.now();
+		let dateSplit = date.split('.');
+		let dateFormatted = [dateSplit[1], dateSplit[0], dateSplit[2]];
+		dateFormatted = dateFormatted.join('-');
+		const eventDate = Date.parse(dateFormatted);
+		console.log(date, now, eventDate, eventDate >= now);
+		return eventDate >= now;
+	};
+
+	const aufabbauDataFiltered = computed(() => {
+		return aufabbauData.filter((val) => afterOrEqualToday(val.date));
+	});
+
+	const kampagneDataFiltered = computed(() => {
+		return kampagneData.filter((val) => afterOrEqualToday(val.date));
+	});
+
+	const narrenfahrplanDataFiltered = computed(() => {
+		return narrenfahrplanData.filter((val) => afterOrEqualToday(val.date));
+	});
 </script>
 
 <style lang="scss" module>

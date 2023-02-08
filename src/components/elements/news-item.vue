@@ -2,20 +2,20 @@
 	<div :class="$style.container">
 		<div :class="$style.content">
 			<div :class="$style.text">
-				<h1 :class="$style.title">Ausgabe #1 - November 2022</h1>
-				<h1>Endlich widda Fasnacht <br />Narri Narro 🎉🎉</h1>
-				<p>Nach zwei Jahren ohne geht’s heute wieder los</p>
+				<h1 :class="$style.title">Ausgabe #3 - Februar 2023</h1>
+				<h1>Hauptfasnacht - Oh du schöne Zeit 🎊</h1>
+				<p>Im Februar geht es Schlag auf Schlag</p>
 			</div>
 			<div :class="$style.thumbnail">
 				<img
 					:src="NewsNovemberTiny"
-					:srcset="`${NewsNovemberTiny} 780w,
-									${NewsNovemberSmall} 1024w,
-									${NewsNovemberMedium} 1440w,
-									${NewsNovemberLarge} 2400w`"
+					:srcset="`${NewsFebruaryTiny} 780w,
+									${NewsFebruarySmall} 1024w,
+									${NewsFebruaryMedium} 1440w,
+									${NewsFebruaryLarge} 2400w`"
 					:class="$style.image"
 				/>
-				<a :href="pdfNov" target="_blank">
+				<a :href="pdfJan" target="_blank">
 					<div :class="$style.iconContainer">
 						<maximize :class="$style.maximize"></maximize>
 					</div>
@@ -47,6 +47,30 @@
 			</div>
 		</div>
 	</div>
+	<div :class="[$style.container, $style.noBorder]">
+		<div :class="$style.content">
+			<div :class="$style.text">
+				<h1 :class="$style.title">Ausgabe #1 - November 2022</h1>
+				<h1>Endlich widda Fasnacht <br />Narri Narro 🎉🎉</h1>
+				<p>Nach zwei Jahren ohne geht’s heute wieder los</p>
+			</div>
+			<div :class="$style.thumbnail">
+				<img
+					:src="NewsNovemberTiny"
+					:srcset="`${NewsNovemberTiny} 780w,
+									${NewsNovemberSmall} 1024w,
+									${NewsNovemberMedium} 1440w,
+									${NewsNovemberLarge} 2400w`"
+					:class="$style.image"
+				/>
+				<a :href="pdfNov" target="_blank">
+					<div :class="$style.iconContainer">
+						<maximize :class="$style.maximize"></maximize>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script setup>
@@ -57,6 +81,10 @@
 	import NewsNovemberMedium from '../../assets/new-november-1440w.png';
 	import NewsNovemberLarge from '../../assets/new-november-2400w.png';
 	import NewsNovemberTiny from '../../assets/new-november-780w.png';
+	import NewsFebruarySmall from '../../assets/news-february-1024w.png';
+	import NewsFebruaryMedium from '../../assets/news-february-1440w.png';
+	import NewsFebruaryLarge from '../../assets/news-february-2400w.png';
+	import NewsFebruaryTiny from '../../assets/news-february-780w.png';
 	import NewsJanuarySmall from '../../assets/news-january-1024w.png';
 	import NewsJanuaryMedium from '../../assets/news-january-1440w.png';
 	import NewsJanuaryLarge from '../../assets/news-january-2400w.png';
@@ -161,6 +189,10 @@
 
 	.container + .container {
 		border-top: none;
+	}
+
+	.noBorder {
+		border: none;
 	}
 
 	@media (max-width: 600px) {

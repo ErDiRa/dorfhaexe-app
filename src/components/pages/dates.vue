@@ -62,10 +62,15 @@
 	const afterOrEqualToday = (date) => {
 		const now = Date.now();
 		let dateSplit = date.split('.');
-		let dateFormatted = [dateSplit[1], dateSplit[0], dateSplit[2]];
-		dateFormatted = dateFormatted.join('-');
+		let dateFormatted = new Date(
+			parseInt(dateSplit[2]),
+			parseInt(dateSplit[1]) - 1,
+			parseInt(dateSplit[0]),
+			12,
+			0,
+			0
+		);
 		const eventDate = Date.parse(dateFormatted);
-		console.log(date, now, eventDate, eventDate >= now);
 		return eventDate >= now;
 	};
 

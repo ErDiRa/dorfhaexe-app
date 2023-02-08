@@ -32,17 +32,21 @@
 
 	const enlarged = ref(false);
 
+	let scrollY = 0;
+
 	const openEnlargedImage = () => {
 		enlarged.value = !enlarged.value;
 		//https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
+
 		if (enlarged.value) {
+			scrollY = window.scrollY;
 			document.body.style.position = 'fixed';
-			document.body.style.top = `-${window.scrollY}px`;
+			document.body.style.top = `-${scrollY}px`;
 		} else {
-			const scrollY = document.body.style.top;
 			document.body.style.position = '';
 			document.body.style.top = '';
-			window.scrollTo(0, parseInt(scrollY || '0') * -1);
+			window.scrollTo(0, parseInt(scrollY));
+			scrollY = 0;
 		}
 	};
 </script>

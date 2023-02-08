@@ -15,7 +15,7 @@
 									${NewsFebruaryLarge} 2400w`"
 					:class="$style.image"
 				/>
-				<a :href="pdfJan" target="_blank">
+				<a :href="pdfFeb" target="_blank">
 					<div :class="$style.iconContainer">
 						<maximize :class="$style.maximize"></maximize>
 					</div>
@@ -75,6 +75,7 @@
 
 <script setup>
 	import pdfNov from '../../assets/ElfterimElften.pdf';
+	import pdfFeb from '../../assets/february.pdf';
 	import pdfJan from '../../assets/january.pdf';
 	import Maximize from '../../assets/maximize.svg';
 	import NewsNovemberSmall from '../../assets/new-november-1024w.png';

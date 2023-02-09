@@ -66,9 +66,9 @@
 			parseInt(dateSplit[2]),
 			parseInt(dateSplit[1]) - 1,
 			parseInt(dateSplit[0]),
-			12,
-			0,
-			0
+			23,
+			59,
+			59
 		);
 		const eventDate = Date.parse(dateFormatted);
 		return eventDate >= now;

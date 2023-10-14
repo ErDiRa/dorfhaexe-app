@@ -1,0 +1,66 @@
+[
+    {
+        "date": "13.01.2024",
+        "event": "Weihnachtsbaumsammlung",
+        "time": "9:00",
+        "meeting_point": "nach Absprache",
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Weihnachtsbaumsammlung_13.01.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20240113T080000Z\r\nDTEND:20240113T090000Z\r\nSUMMARY:Weihnachtsbaumsammlung\r\nLOCATION:nach Absprache\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Weihnachtsbaumsammlung_13.01.2024.ics"
+    },
+    {
+        "date": "03.02.2024",
+        "event": "Zeltvorbau stellen, Straßendeko aufhängen, Schilder stellen",
+        "time": "10:00",
+        "meeting_point": "Halle",
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Zeltvorbau stellen, Straßendeko aufhängen, Schilder\r\n  stellen_03.02.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20240203T090000Z\r\nDTEND:20240203T100000Z\r\nSUMMARY:Zeltvorbau stellen\\, Straßendeko aufhängen\\, Schilder stellen\r\nLOCATION:Halle\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Zeltvorbau stellen, Straßendeko aufhängen, Schilder stellen_03.02.2024.ics"
+    },
+    {
+        "date": "08.02.2024",
+        "event": "Aufbau Hemglunki",
+        "time": "-",
+        "meeting_point": "Nach Absprache Vereinsheim",
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Aufbau Hemglunki_08.02.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20240208T110000Z\r\nDTEND:20240208T120000Z\r\nSUMMARY:Aufbau Hemglunki\r\nLOCATION:Nach Absprache Vereinsheim\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Aufbau Hemglunki_08.02.2024.ics"
+    },
+    {
+        "date": "10.02.2024",
+        "event": "Zelt, Zeltvorbau und Schulhof für RoMo richten",
+        "time": "10:00",
+        "meeting_point": "Halle",
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Zelt, Zeltvorbau und Schulhof für RoMo richten_10.02.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20240210T090000Z\r\nDTEND:20240210T100000Z\r\nSUMMARY:Zelt\\, Zeltvorbau und Schulhof für RoMo richten\r\nLOCATION:Halle\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Zelt, Zeltvorbau und Schulhof für RoMo richten_10.02.2024.ics"
+    },
+    {
+        "date": "13.02.2024",
+        "event": "Abbau RoMo",
+        "time": "10:00",
+        "meeting_point": "Halle",
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Abbau RoMo_13.02.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20240213T090000Z\r\nDTEND:20240213T100000Z\r\nSUMMARY:Abbau RoMo\r\nLOCATION:Halle\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Abbau RoMo_13.02.2024.ics"
+    },
+    {
+        "date": "14.06.2024",
+        "event": "Aufbau Dorfhock",
+        "time": "18:00",
+        "meeting_point": "Dorfplatz",
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Aufbau Dorfhock_14.06.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20240614T160000Z\r\nDTEND:20240614T170000Z\r\nSUMMARY:Aufbau Dorfhock\r\nLOCATION:Dorfplatz\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Aufbau Dorfhock_14.06.2024.ics"
+    },
+    {
+        "date": "15.06.2024",
+        "event": "Aufbau Dorfhock",
+        "time": "10:00",
+        "meeting_point": "Dorfplatz",
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Aufbau Dorfhock_15.06.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20240615T080000Z\r\nDTEND:20240615T090000Z\r\nSUMMARY:Aufbau Dorfhock\r\nLOCATION:Dorfplatz\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Aufbau Dorfhock_15.06.2024.ics"
+    },
+    {
+        "date": "16.06.2024",
+        "event": "Abbau Dorfhock",
+        "time": "18:00",
+        "meeting_point": "Dorfplatz",
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Abbau Dorfhock_16.06.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20240616T160000Z\r\nDTEND:20240616T170000Z\r\nSUMMARY:Abbau Dorfhock\r\nLOCATION:Dorfplatz\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Abbau Dorfhock_16.06.2024.ics"
+    }
+]

@@ -1,6 +1,6 @@
 <template>
 	<main :class="$style.main">
-		<h1 :class="$style.title">Termine 2022/2023</h1>
+		<h1 :class="$style.title">Termine 2023/2024</h1>
 		<p :class="$style.info">
 			Hier findet ihr unsere aktuellen Termine. <br />Vielleicht sieht man sich
 			ja hin und wieder auf der ein oder anderen Verstanstaltung. Wir würden uns

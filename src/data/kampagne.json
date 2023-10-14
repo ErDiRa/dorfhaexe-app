@@ -1,114 +1,114 @@
 [
     {
-        "date": "11.11.2022",
-        "event": "Fasnachtseröffnung",
+        "date": "11.11.2023",
+        "event": "Fasnachtseröffnung (Chürbse)",
         "time": "-",
-        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Fasnachtseröffnung_11.11.2022\r\nCREATED:20230102T211825Z\r\nDTSTAMP:20230102T211825Z\r\nDTSTART:20221111T110000Z\r\nDTEND:20221111T120000Z\r\nSUMMARY:Fasnachtseröffnung\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
-        "ics_file_name": "Fasnachtseröffnung_11.11.2022.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Fasnachtseröffnung (Chürbse)_11.11.2023\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20231111T110000Z\r\nDTEND:20231111T120000Z\r\nSUMMARY:Fasnachtseröffnung (Chürbse)\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Fasnachtseröffnung (Chürbse)_11.11.2023.ics"
     },
     {
-        "date": "18.11.2022",
+        "date": "24.11.2023",
         "event": "Theaterbewirtung",
         "time": "-",
-        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Theaterbewirtung_18.11.2022\r\nCREATED:20230102T211825Z\r\nDTSTAMP:20230102T211825Z\r\nDTSTART:20221118T110000Z\r\nDTEND:20221118T120000Z\r\nSUMMARY:Theaterbewirtung\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
-        "ics_file_name": "Theaterbewirtung_18.11.2022.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Theaterbewirtung_24.11.2023\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20231124T110000Z\r\nDTEND:20231124T120000Z\r\nSUMMARY:Theaterbewirtung\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Theaterbewirtung_24.11.2023.ics"
     },
     {
-        "date": "18.11.2022",
+        "date": "25.11.2023",
         "event": "Theaterbewirtung",
         "time": "-",
-        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Theaterbewirtung_18.11.2022\r\nCREATED:20230102T211825Z\r\nDTSTAMP:20230102T211825Z\r\nDTSTART:20221118T110000Z\r\nDTEND:20221118T120000Z\r\nSUMMARY:Theaterbewirtung\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
-        "ics_file_name": "Theaterbewirtung_18.11.2022.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Theaterbewirtung_25.11.2023\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20231125T110000Z\r\nDTEND:20231125T120000Z\r\nSUMMARY:Theaterbewirtung\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Theaterbewirtung_25.11.2023.ics"
     },
     {
-        "date": "26.11.2022",
-        "event": "Theaterbewirtung",
-        "time": "-",
-        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Theaterbewirtung_26.11.2022\r\nCREATED:20230102T211825Z\r\nDTSTAMP:20230102T211825Z\r\nDTSTART:20221126T110000Z\r\nDTEND:20221126T120000Z\r\nSUMMARY:Theaterbewirtung\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
-        "ics_file_name": "Theaterbewirtung_26.11.2022.ics"
+        "date": "31.12.2023",
+        "event": "Altjohr-Bier",
+        "time": "11:00",
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Altjohr-Bier_31.12.2023\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20231231T100000Z\r\nDTEND:20231231T110000Z\r\nSUMMARY:Altjohr-Bier\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Altjohr-Bier_31.12.2023.ics"
     },
     {
-        "date": "27.11.2022",
-        "event": "Theaterbewirtung",
-        "time": "-",
-        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Theaterbewirtung_27.11.2022\r\nCREATED:20230102T211825Z\r\nDTSTAMP:20230102T211825Z\r\nDTSTART:20221127T110000Z\r\nDTEND:20221127T120000Z\r\nSUMMARY:Theaterbewirtung\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
-        "ics_file_name": "Theaterbewirtung_27.11.2022.ics"
-    },
-    {
-        "date": "07.01.2023",
+        "date": "13.01.2024",
         "event": "Weihnachtsbaumsammlung",
         "time": "09:00",
-        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Weihnachtsbaumsammlung_07.01.2023\r\nCREATED:20230102T211825Z\r\nDTSTAMP:20230102T211825Z\r\nDTSTART:20230107T080000Z\r\nDTEND:20230107T090000Z\r\nSUMMARY:Weihnachtsbaumsammlung\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
-        "ics_file_name": "Weihnachtsbaumsammlung_07.01.2023.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Weihnachtsbaumsammlung_13.01.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20240113T080000Z\r\nDTEND:20240113T090000Z\r\nSUMMARY:Weihnachtsbaumsammlung\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Weihnachtsbaumsammlung_13.01.2024.ics"
     },
     {
-        "date": "16.02.2023",
-        "event": "Hemdglunki mit Schlüsselübergabe",
+        "date": "08.02.2024",
+        "event": "Hemdglunki mit Schlüsselübergabe und Ausklang im Vereinsheim",
         "time": "-",
-        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Hemdglunki mit Schlüsselübergabe_16.02.2023\r\nCREATED:20230102T211825Z\r\nDTSTAMP:20230102T211825Z\r\nDTSTART:20230216T110000Z\r\nDTEND:20230216T120000Z\r\nSUMMARY:Hemdglunki mit Schlüsselübergabe\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
-        "ics_file_name": "Hemdglunki mit Schlüsselübergabe_16.02.2023.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Hemdglunki mit Schlüsselübergabe und Ausklang im\r\n  Vereinsheim_08.02.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20240208T110000Z\r\nDTEND:20240208T120000Z\r\nSUMMARY:Hemdglunki mit Schlüsselübergabe und Ausklang im Vereinsheim\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Hemdglunki mit Schlüsselübergabe und Ausklang im Vereinsheim_08.02.2024.ics"
     },
     {
-        "date": "20.02.2023",
-        "event": "Rosenmontag",
-        "time": "-",
-        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Rosenmontag_20.02.2023\r\nCREATED:20230102T211825Z\r\nDTSTAMP:20230102T211825Z\r\nDTSTART:20230220T110000Z\r\nDTEND:20230220T120000Z\r\nSUMMARY:Rosenmontag\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
-        "ics_file_name": "Rosenmontag_20.02.2023.ics"
+        "date": "12.02.2024",
+        "event": "Rosenmontag Rümmingen",
+        "time": "09:00",
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Rosenmontag Rümmingen_12.02.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20240212T080000Z\r\nDTEND:20240212T090000Z\r\nSUMMARY:Rosenmontag Rümmingen\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Rosenmontag Rümmingen_12.02.2024.ics"
     },
     {
-        "date": "25.02.2023",
+        "date": "17.02.2024",
         "event": "Kinderfasnacht",
         "time": "14:00",
-        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Kinderfasnacht_25.02.2023\r\nCREATED:20230102T211825Z\r\nDTSTAMP:20230102T211825Z\r\nDTSTART:20230225T130000Z\r\nDTEND:20230225T140000Z\r\nSUMMARY:Kinderfasnacht\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
-        "ics_file_name": "Kinderfasnacht_25.02.2023.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Kinderfasnacht_17.02.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20240217T130000Z\r\nDTEND:20240217T140000Z\r\nSUMMARY:Kinderfasnacht\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Kinderfasnacht_17.02.2024.ics"
     },
     {
-        "date": "26.02.2023",
-        "event": "Fasnachtsfeuer",
+        "date": "17.02.2024",
+        "event": "Bunter Abend Vereinsheim",
+        "time": "19:00",
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Bunter Abend Vereinsheim_17.02.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20240217T180000Z\r\nDTEND:20240217T190000Z\r\nSUMMARY:Bunter Abend Vereinsheim\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Bunter Abend Vereinsheim_17.02.2024.ics"
+    },
+    {
+        "date": "26.02.2024",
+        "event": "Fasnachtsfeuer mit Häxeverbrennung",
         "time": "18:30",
-        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Fasnachtsfeuer_26.02.2023\r\nCREATED:20230102T211825Z\r\nDTSTAMP:20230102T211825Z\r\nDTSTART:20230226T173000Z\r\nDTEND:20230226T183000Z\r\nSUMMARY:Fasnachtsfeuer\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
-        "ics_file_name": "Fasnachtsfeuer_26.02.2023.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Fasnachtsfeuer mit Häxeverbrennung_26.02.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20240226T173000Z\r\nDTEND:20240226T183000Z\r\nSUMMARY:Fasnachtsfeuer mit Häxeverbrennung\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Fasnachtsfeuer mit Häxeverbrennung_26.02.2024.ics"
     },
     {
-        "date": "01.05.2023",
+        "date": "01.05.2024",
         "event": "Maiwanderung",
         "time": "10:00",
-        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Maiwanderung_01.05.2023\r\nCREATED:20230102T211825Z\r\nDTSTAMP:20230102T211825Z\r\nDTSTART:20230501T080000Z\r\nDTEND:20230501T090000Z\r\nSUMMARY:Maiwanderung\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
-        "ics_file_name": "Maiwanderung_01.05.2023.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Maiwanderung_01.05.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20240501T080000Z\r\nDTEND:20240501T090000Z\r\nSUMMARY:Maiwanderung\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Maiwanderung_01.05.2024.ics"
     },
     {
-        "date": "17.06.2023",
+        "date": "15.06.2024",
         "event": "Dorfhock Rümmingen",
         "time": "-",
-        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Dorfhock Rümmingen_17.06.2023\r\nCREATED:20230102T211825Z\r\nDTSTAMP:20230102T211825Z\r\nDTSTART:20230617T100000Z\r\nDTEND:20230617T110000Z\r\nSUMMARY:Dorfhock Rümmingen\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
-        "ics_file_name": "Dorfhock Rümmingen_17.06.2023.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Dorfhock Rümmingen_15.06.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20240615T100000Z\r\nDTEND:20240615T110000Z\r\nSUMMARY:Dorfhock Rümmingen\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Dorfhock Rümmingen_15.06.2024.ics"
     },
     {
-        "date": "18.06.2023",
+        "date": "16.06.2024",
         "event": "Dorfhock Rümmingen",
         "time": "-",
-        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Dorfhock Rümmingen_18.06.2023\r\nCREATED:20230102T211825Z\r\nDTSTAMP:20230102T211825Z\r\nDTSTART:20230618T100000Z\r\nDTEND:20230618T110000Z\r\nSUMMARY:Dorfhock Rümmingen\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
-        "ics_file_name": "Dorfhock Rümmingen_18.06.2023.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Dorfhock Rümmingen_16.06.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20240616T100000Z\r\nDTEND:20240616T110000Z\r\nSUMMARY:Dorfhock Rümmingen\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Dorfhock Rümmingen_16.06.2024.ics"
     },
     {
-        "date": "13.10.2023",
-        "event": "Generalversammlung  Förderverein",
+        "date": "11.10.2024",
+        "event": "Generalversammlung Fördeverein",
         "time": "19:15",
-        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Generalversammlung  Förderverein_13.10.2023\r\nCREATED:20230102T211825Z\r\nDTSTAMP:20230102T211825Z\r\nDTSTART:20231013T171500Z\r\nDTEND:20231013T181500Z\r\nSUMMARY:Generalversammlung  Förderverein\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
-        "ics_file_name": "Generalversammlung  Förderverein_13.10.2023.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Generalversammlung Fördeverein_11.10.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20241011T171500Z\r\nDTEND:20241011T181500Z\r\nSUMMARY:Generalversammlung Fördeverein\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Generalversammlung Fördeverein_11.10.2024.ics"
     },
     {
-        "date": "13.10.2023",
+        "date": "11.10.2024",
         "event": "Generalversammlung Hauptverein",
         "time": "20:15",
-        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Generalversammlung Hauptverein_13.10.2023\r\nCREATED:20230102T211825Z\r\nDTSTAMP:20230102T211825Z\r\nDTSTART:20231013T181500Z\r\nDTEND:20231013T191500Z\r\nSUMMARY:Generalversammlung Hauptverein\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
-        "ics_file_name": "Generalversammlung Hauptverein_13.10.2023.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Generalversammlung Hauptverein_11.10.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20241011T181500Z\r\nDTEND:20241011T191500Z\r\nSUMMARY:Generalversammlung Hauptverein\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Generalversammlung Hauptverein_11.10.2024.ics"
     },
     {
-        "date": "11.11.2023",
+        "date": "11.11.2024",
         "event": "Fasnachtseröffnung",
         "time": "-",
-        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Fasnachtseröffnung_11.11.2023\r\nCREATED:20230102T211825Z\r\nDTSTAMP:20230102T211825Z\r\nDTSTART:20231111T110000Z\r\nDTEND:20231111T120000Z\r\nSUMMARY:Fasnachtseröffnung\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
-        "ics_file_name": "Fasnachtseröffnung_11.11.2023.ics"
+        "ics_file": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//arran4//Golang ICS Library\r\nMETHOD:REQUEST\r\nBEGIN:VEVENT\r\nUID:Fasnachtseröffnung_11.11.2024\r\nCREATED:20231014T120341Z\r\nDTSTAMP:20231014T120341Z\r\nDTSTART:20241111T110000Z\r\nDTEND:20241111T120000Z\r\nSUMMARY:Fasnachtseröffnung\r\nLOCATION:\r\nORGANIZER:Dorfhäxe Rümmingen 1975 e.V.\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+        "ics_file_name": "Fasnachtseröffnung_11.11.2024.ics"
     }
 ]

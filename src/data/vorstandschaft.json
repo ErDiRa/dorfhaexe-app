@@ -54,9 +54,9 @@
 ],
 "support": [
 	{
-		"name": "Michael Wild",
+		"name": "Marcel Schauer",
 		"position": "Vorstand",
-		"profileImg": "../../assets/vorstand_foerder.JPG"
+		"profileImg": ""
 	},
 	{
 		"name": "Maja Baier",
@@ -64,9 +64,9 @@
 		"profileImg": "../../assets/kassierer_foerder.JPG"
 	},
 	{
-		"name": "Cornelia Wild",
-		"position": "Schriftführerin",
-		"profileImg": "../../assets/schriftführer_foerder.JPG"
+		"name": "Timo Statt",
+		"position": "Schriftführer",
+		"profileImg": ""
 	}
 ]
 

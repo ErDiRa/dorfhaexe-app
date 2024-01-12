@@ -2,6 +2,30 @@
 	<div :class="$style.container">
 		<div :class="$style.content">
 			<div :class="$style.text">
+				<h1 :class="$style.title">Ausgabe #4 - Januar 2024</h1>
+				<h1>2024 startet mit Highlight-Tag 🚀</h1>
+				<p>Einiges steht an im Januar</p>
+			</div>
+			<div :class="$style.thumbnail">
+				<img
+					:src="NewsNovemberTiny"
+					:srcset="`${NewsJanuaryTiny2024} 780w,
+									${NewsJanuarySmall2024} 1024w,
+									${NewsJanuaryMedium2024} 1440w,
+									${NewsJanuaryLarge2024} 2400w`"
+					:class="$style.image"
+				/>
+				<a :href="pdfJan2024" target="_blank">
+					<div :class="$style.iconContainer">
+						<maximize :class="$style.maximize"></maximize>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div :class="$style.container">
+		<div :class="$style.content">
+			<div :class="$style.text">
 				<h1 :class="$style.title">Ausgabe #3 - Februar 2023</h1>
 				<h1>Hauptfasnacht - Oh du schöne Zeit 🎊</h1>
 				<p>Im Februar geht es Schlag auf Schlag</p>
@@ -74,6 +98,7 @@
 </template>
 
 <script setup>
+	import pdfJan2024 from '../../assets/2024_january.pdf';
 	import pdfNov from '../../assets/ElfterimElften.pdf';
 	import pdfFeb from '../../assets/february.pdf';
 	import pdfJan from '../../assets/january.pdf';
@@ -90,6 +115,10 @@
 	import NewsJanuaryMedium from '../../assets/news-january-1440w.png';
 	import NewsJanuaryLarge from '../../assets/news-january-2400w.png';
 	import NewsJanuaryTiny from '../../assets/news-january-780w.png';
+	import NewsJanuarySmall2024 from '../../assets/news_january-2024-1024w.png';
+	import NewsJanuaryMedium2024 from '../../assets/news_january-2024-1440w.png';
+	import NewsJanuaryLarge2024 from '../../assets/news_january-2024-2400w.png';
+	import NewsJanuaryTiny2024 from '../../assets/news_january-2024-780w.png';
 </script>
 
 <style lang="scss" module>

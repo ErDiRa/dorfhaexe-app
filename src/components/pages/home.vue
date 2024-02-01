@@ -13,7 +13,8 @@
 					Der Rosenmontag steht vor der Tür ☝️☝️
 				</h2>
 				<p @click="navigateTo(navigation.romo.ROUTE)">
-					<a>Hier</a> findet ihr aktuelle Infos für unsere Rosenmontagsumzug am
+					<a>Hier</a> findet ihr aktuelle Infos über unseren Rosenmontagsumzug
+					am
 					<b>12.02.2024</b>
 				</p>
 			</div>

@@ -1,7 +1,7 @@
 <template>
 	<main :class="$style.main">
 		<h1>Rosenmontagsumzug - 12.02.2024</h1>
-		<p>Hier findet ihr alle aktuellen Info zu unserem Rosenmontagsumzug</p>
+		<p>Hier findet ihr alle aktuellen Infos über unseren Rosenmontagsumzug</p>
 		<div :class="$style.container">
 			<div :class="$style.content">
 				<div :class="$style.text">

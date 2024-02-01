@@ -22,6 +22,18 @@
 						<hr />
 						<li>
 							<a
+								@click="navigateTo(navigation.romo.ROUTE)"
+								:class="
+									currentView && currentView === navigation.romo.ROUTE
+										? $style.active
+										: ''
+								"
+								>{{ navigation.romo.NAME }}</a
+							>
+						</li>
+						<hr />
+						<li>
+							<a
 								@click="navigateTo(navigation.dates.ROUTE)"
 								:class="
 									currentView && currentView === navigation.dates.ROUTE

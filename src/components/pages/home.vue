@@ -6,6 +6,20 @@
 			Herzlich Willkommen und viel Spass auf unserer Homepage
 		</p>
 		<gallery></gallery>
+		<div :class="$style.newsContainer">
+			<hr :class="$style.separator" />
+			<div>
+				<h2 :class="$style.subHeader">
+					Der Rosenmontag steht vor der Tür ☝️☝️
+				</h2>
+				<p @click="navigateTo(navigation.romo.ROUTE)">
+					<a>Hier</a> findet ihr aktuelle Infos für unsere Rosenmontagsumzug am
+					<b>12.02.2024</b>
+				</p>
+			</div>
+			<hr :class="$style.separator" />
+		</div>
+
 		<div :class="$style.socialMedia">
 			<h2 :class="$style.subHeader">
 				Ihr wollt nichts verpassen und up to date bleiben?
@@ -32,13 +46,20 @@
 </template>
 
 <script setup>
+	import { useRouter } from 'vue-router';
 	import Facebook from '../../assets/facebook.svg';
-	// import Instagram from '../../assets/instagram.svg';
 	import rubberImg from '../../assets/rubber.png';
+	import { navigation } from '../../const/strings';
 	import Gallery from '../elements/gallery.vue';
+
+	const router = useRouter();
 
 	const openLink = (link) => {
 		window.open(link, '_blank');
+	};
+
+	const navigateTo = (path) => {
+		router.push(path);
 	};
 </script>
 
@@ -68,6 +89,11 @@
 		}
 	}
 
+	.separator {
+		border: 0;
+		border-top: 2px solid #d9d9d9;
+	}
+
 	.subHeader {
 		font-size: 2rem;
 		text-align: left;
@@ -77,6 +103,32 @@
 	@media (max-width: 960px) {
 		.subHeader {
 			font-size: 1rem;
+		}
+	}
+
+	.newsContainer {
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+
+		div {
+			padding: 0.5rem 0;
+		}
+
+		p {
+			margin-top: 0;
+			text-align: left;
+			font-size: 1.5rem;
+
+			a {
+				cursor: pointer;
+				text-decoration: underline;
+				text-underline-offset: 2px;
+			}
+		}
+		@media (max-width: 960px) {
+			p {
+				font-size: 1rem;
+			}
 		}
 	}
 

@@ -26,6 +26,10 @@ const navigation = {
 		NAME: 'News',
 		ROUTE: '/news'
 	},
+	romo: {
+		NAME: 'Rosenmontag',
+		ROUTE: '/romo'
+	},
 	contact: {
 		NAME: 'Kontakt',
 		ROUTE: '/kontakt'

@@ -5,6 +5,7 @@ import Dates from './components/pages/dates.vue';
 import History from './components/pages/history.vue';
 import Home from './components/pages/home.vue';
 import News from './components/pages/news.vue';
+import Romo from './components/pages/romo-news.vue';
 
 import { navigation } from './const/strings';
 
@@ -21,6 +22,10 @@ const routes = [
 	{
 		path: navigation.news.ROUTE,
 		component: News
+	},
+	{
+		path: navigation.romo.ROUTE,
+		component: Romo
 	},
 	{
 		path: navigation.about.ROUTE,

@@ -1,19 +1,57 @@
 <template>
 	<main :class="$style.main">
-		<h1>Rosenmontagsumzug - 12.02.2024</h1>
-		<p>Hier findet ihr alle aktuellen Infos über unseren Rosenmontagsumzug</p>
+		<h1>50 Johr Dorfhäxe Rümminge - 18.01.2025</h1>
 		<div :class="$style.container">
 			<div :class="$style.content">
 				<div :class="$style.text">
-					<h1 :class="$style.title">Umzugsstrecke und Aufstellungsplan 🤓</h1>
-					<a :href="RomoInfo" target="_blank">
-						Hier findet ihr die Umzugsstrecke sowie den aktuellen
-						Aufstellungsplan zum <span>herunterladen</span>.
-					</a>
+					<h1 :class="$style.title">50 Johr 🥳🥳, verruckt!</h1>
+					<div>
+						<div :class="$style.infos">
+							Gerne würden wir das mit euch feiern!!
+							<div>
+								<ul>
+									<li>
+										<div :class="$style.row">
+											<div :class="$style.key"><b>Wann?&nbsp;</b></div>
+											<div :class="$style.value">Am 18.01.2025 ab 19.30Uhr</div>
+										</div>
+									</li>
+									<li>
+										<div :class="$style.row">
+											<div :class="$style.key"><b>Wo?&nbsp;</b></div>
+											<div :class="$style.value">Gemeindehalle Rümmingen</div>
+										</div>
+									</li>
+									<li>
+										<div :class="$style.row">
+											<div :class="$style.key"><b>Eintritt?&nbsp;</b></div>
+											<div :class="$style.value">10€</div>
+										</div>
+									</li>
+									<li>
+										<div :class="$style.row">
+											<div :class="$style.key"><b>Anmeldung?&nbsp;</b></div>
+											<div :class="$style.value">
+												<a
+													:class="$style.link"
+													href="mailto:jubidorfhaexe@gmx.de"
+													>jubidorfhaexe@gmx.de</a
+												>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<a :href="RomoInfo" target="_blank" :class="$style.link"
+							>Noch nicht überzeugt? Noch mehr Infos findet ihr in unserem Flyer
+							👇👇</a
+						>
+					</div>
 				</div>
 				<div :class="$style.thumbnail">
-					<img :src="RomoThumb" :class="$style.image" />
 					<a :href="RomoInfo" target="_blank">
+						<img :src="RomoThumb" :class="$style.image" />
 						<div :class="$style.iconContainer">
 							<maximize :class="$style.maximize"></maximize>
 						</div>
@@ -25,9 +63,9 @@
 </template>
 
 <script setup>
+	import RomoInfo from '../../assets/jubi.pdf';
+	import RomoThumb from '../../assets/jubi.png';
 	import Maximize from '../../assets/maximize.svg';
-	import RomoInfo from '../../assets/romo-2024-1.pdf';
-	import RomoThumb from '../../assets/romo-thumbnail-2024-1.png';
 </script>
 
 <style lang="scss" module>
@@ -55,7 +93,7 @@
 
 			.content {
 				display: flex;
-				flex-direction: row;
+				flex-direction: column;
 				.title {
 					text-align: left;
 					margin-bottom: 1rem;
@@ -78,17 +116,57 @@
 						line-height: 2.3rem;
 					}
 
-					a {
+					div {
 						margin: 0;
 						color: inherit;
-						margin-top: 1rem;
 						font-size: 1.5rem;
 						line-height: 2rem;
 						text-align: left;
-						text-decoration: none;
+						a {
+							margin: 0;
+							color: inherit;
+							margin-top: 1rem;
+							font-size: 1.5rem;
+							line-height: 2rem;
+							text-align: left;
+							text-decoration: none;
+							position: relative;
+						}
+
+						.infos {
+							display: flex;
+							flex-direction: column;
+						}
+
+						.footer {
+							display: flex;
+							flex-direction: row;
+						}
 						span {
 							text-decoration: underline;
 							text-underline-offset: 2px;
+						}
+
+						ul {
+							list-style-type: none;
+							padding: 0;
+
+							li {
+								.row {
+									display: flex;
+									flex-direction: column;
+									.value {
+										a {
+											text-decoration: underline;
+											text-underline-offset: 2px;
+										}
+									}
+								}
+							}
+
+							li + li {
+								margin-top: 1rem;
+							}
 						}
 					}
 
@@ -98,7 +176,13 @@
 							line-height: 1.3rem;
 						}
 
-						a {
+						div {
+							font-size: 1rem;
+							line-height: 1.3rem;
+							margin-top: 0;
+						}
+
+						.link {
 							font-size: 1rem;
 							line-height: 1.3rem;
 							margin-top: 0;
@@ -118,7 +202,8 @@
 						border: 1px solid #ddd; /* Gray border */
 						border-radius: 4px; /* Rounded border */
 						padding: 5px; /* Some padding */
-						width: 175px; /* Set a small width */
+						width: 80vw; /* Set a small width */
+						max-width: 512px;
 						height: auto;
 					}
 

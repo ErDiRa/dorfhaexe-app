@@ -27,8 +27,8 @@ const navigation = {
 		ROUTE: '/news'
 	},
 	romo: {
-		NAME: 'Rosenmontag',
-		ROUTE: '/romo'
+		NAME: 'Jubiläum',
+		ROUTE: '/jubi'
 	},
 	contact: {
 		NAME: 'Kontakt',
@@ -40,4 +40,4 @@ const navigation = {
 	}
 };
 
-export { strings_DE, navigation };
+export { navigation, strings_DE };

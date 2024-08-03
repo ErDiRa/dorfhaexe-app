@@ -9,13 +9,10 @@
 		<div :class="$style.newsContainer">
 			<hr :class="$style.separator" />
 			<div>
-				<h2 :class="$style.subHeader">
-					Der Rosenmontag steht vor der Tür ☝️☝️
-				</h2>
+				<h2 :class="$style.subHeader">50 Johr Dorfhäxe Rümminge</h2>
 				<p @click="navigateTo(navigation.romo.ROUTE)">
-					<a>Hier</a> findet ihr aktuelle Infos über unseren Rosenmontagsumzug
-					am
-					<b>12.02.2024</b>
+					<a>Hier</a> findet ihr aktuelle Infos über unser anstehendes Jubiläum
+					<b>18.01.2025</b>
 				</p>
 			</div>
 			<hr :class="$style.separator" />
